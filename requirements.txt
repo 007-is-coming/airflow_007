@@ -1,0 +1,3 @@
+spotify
+pandas
+requests

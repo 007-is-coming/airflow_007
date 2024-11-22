@@ -3,3 +3,7 @@ venv
 # logs 파일
 logs
 logs/
+logs/scheduler/example_dags
+latest
+
+__pycache__
