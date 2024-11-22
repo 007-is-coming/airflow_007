@@ -97,7 +97,9 @@ with DAG('api_call_dag', start_date=datetime(2024, 11, 22), schedule_interval=No
         python_callable=call_api,
     )
 
-
+'''
+connections 설정 후 사용할 버전
+'''
 from airflow.providers.http.operators.http import SimpleHttpOperator
 from airflow.operators.python import PythonOperator
 
