@@ -85,7 +85,10 @@ from datetime import datetime
 
 def call_api():
     http = HttpHook(method='GET', http_conn_id='my_http_connection')
-    response = http.run('your_api_endpoint')  # 'your_api_endpoint'는 API 경로
+    response = http.run('your_api_endpoint')  # 'your_api_endpoint'는 API 경로 
+    '''
+    Django에서 Airflow API를 호출하는 예시로 api_endpoint는 Airflow의 /api/v1/dags/{dag_id}/dagRuns 경로가 됩니다. 여기서 dag_id는 실행할 DAG의 ID로, 이를 동적으로 설정해야 합니다.
+    '''
     print(response.text)  # API 응답 출력
 
 with DAG('api_call_dag', start_date=datetime(2024, 11, 22), schedule_interval=None) as dag:
@@ -93,5 +96,35 @@ with DAG('api_call_dag', start_date=datetime(2024, 11, 22), schedule_interval=No
         task_id='call_external_api',
         python_callable=call_api,
     )
+
+
+from airflow.providers.http.operators.http import SimpleHttpOperator
+from airflow.operators.python import PythonOperator
+
+def process_api_response(response):
+    if response.status_code == 200:
+        data = response.json()
+        # 응답 데이터 처리
+    else:
+        raise Exception("API 호출 실패")
+
+with DAG('api_response_dag', start_date=datetime(2024, 11, 22), schedule_interval=None) as dag:
+    api_task = SimpleHttpOperator(
+        task_id='call_api_and_process',
+        method='GET',
+        http_conn_id='my_http_connection',
+        endpoint='your_api_endpoint',
+        response_check=lambda response: response.status_code == 200,  # 상태 코드 확인
+        log_response=True,
+    )
+
+    process_task = PythonOperator(
+        task_id='process_api_response',
+        python_callable=process_api_response,
+        op_kwargs={'response': api_task.output}  # api_task의 출력값을 처리
+    )
+
+    api_task >> process_task
+
 
 
