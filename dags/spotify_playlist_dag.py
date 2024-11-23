@@ -1,5 +1,6 @@
 import os
 import spotipy
+from airflow.models import Variable
 from spotipy.oauth2 import SpotifyOAuth
 from airflow import DAG
 from airflow.operators.python import PythonOperator
@@ -21,7 +22,7 @@ def load_data_to_db(playlist_data):
         return
 
     # Postgres 연결 설정 (PostgresHook 사용)
-    pg_hook = PostgresHook(postgres_conn_id='postgres_default')  # Airflow에서 설정한 연결 ID 사용
+    pg_hook = PostgresHook(postgres_conn_id='playlist')  # Airflow에서 설정한 연결 ID 사용
     conn = pg_hook.get_conn()
     cursor = conn.cursor()
 
@@ -58,7 +59,7 @@ default_args = {
     'owner': 'airflow',
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
-    'start_date': datetime(2024, 11, 22),  # 원하는 시작 날짜 설정
+    'start_date': datetime(2023, 11, 22),  # 원하는 시작 날짜 설정
 }
 
 dag = DAG(

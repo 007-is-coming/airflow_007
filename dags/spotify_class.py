@@ -1,21 +1,30 @@
+import os
+import spotipy
+from airflow.models import Variable
+from spotipy.oauth2 import SpotifyClientCredentials
+from airflow import DAG
+from airflow.operators.python import PythonOperator
+from airflow.providers.postgres.hooks.postgres import PostgresHook
+from datetime import datetime, timedelta
+import requests
+import base64
+
 class SpotifyClient:
     def __init__(self):
         """ 환경 변수 가져오기 """
-        client_id = os.getenv("CLIENT_ID")
-        client_secret = os.getenv("CLIENT_SECRET")
-        redirect_uri = os.getenv("REDIRECT_URI")
+        client_id = Variable.get("CLIENT_ID")
+        client_secret = Variable.get("CLIENT_SECRET")
+        redirect_uri = Variable.get("REDIRECT_URI")
 
-        # Spotipy 초기화
+        # Spotipy initialization
         self.scope = "playlist-read-private playlist-read-collaborative"
         self.sp = spotipy.Spotify(
-            auth_manager=SpotifyOAuth(
+            auth_manager=SpotifyClientCredentials(
                 client_id=client_id,
                 client_secret=client_secret,
-                redirect_uri=redirect_uri,
-                scope=self.scope,
             )
         )
-
+        
     def get_recommendations(self, song_title):
         """ 추천곡을 가져오는 함수 """
         # 노래 검색
