@@ -27,11 +27,11 @@ def load_data_to_db(recommendations_data):
     cursor = conn.cursor()
 
     # 기존 songs 테이블 드롭
-    cursor.execute("DROP TABLE IF EXISTS spotify_recommend")
+    cursor.execute("DROP TABLE IF EXISTS playlist_schema.spotify_recommend")
 
     # songs 테이블 생성 (no는 SERIAL PK로 설정)
     create_table_query = """
-    CREATE TABLE spotify_recommend (
+    CREATE TABLE playlist_schema.spotify_recommend (
         no SERIAL PRIMARY KEY,
         title VARCHAR(256),
         link VARCHAR(256),
@@ -45,7 +45,7 @@ def load_data_to_db(recommendations_data):
     # 데이터를 songs 테이블에 삽입
     for song in recommendations_data:
         insert_query = """
-        INSERT INTO spotify_recommend (title, link, cover_image)
+        INSERT INTO playlist_schema.spotify_recommend (title, link, cover_image)
         VALUES (%s, %s, %s)
         """
         recommand_list.append(song)

@@ -27,11 +27,11 @@ def load_data_to_db(playlist_data):
     cursor = conn.cursor()
 
     # 기존 playlists 테이블 드롭
-    cursor.execute("DROP TABLE IF EXISTS spotify_playlist")
+    cursor.execute("DROP TABLE IF EXISTS playlist_schema.spotify_playlist")
 
     # playlists 테이블 생성 (no는 SERIAL PK로 설정)
     create_table_query = """
-    CREATE TABLE spotify_playlist (
+    CREATE TABLE playlist_schema.spotify_playlist (
         no SERIAL PRIMARY KEY,
         title VARCHAR(256),
         link VARCHAR(256),
@@ -43,7 +43,7 @@ def load_data_to_db(playlist_data):
     # 데이터를 playlists 테이블에 삽입
     for playlist in playlist_data:
         insert_query = """
-        INSERT INTO spotify_playlist (title, link, cover_image)
+        INSERT INTO playlist_schema.spotify_playlist (title, link, cover_image)
         VALUES (%s, %s, %s)
         """
         cursor.execute(insert_query, (playlist['title'], playlist['link'], playlist['cover_image']))

@@ -14,7 +14,6 @@ class SpotifyClient:
         """ 환경 변수 가져오기 """
         client_id = Variable.get("CLIENT_ID")
         client_secret = Variable.get("CLIENT_SECRET")
-        redirect_uri = Variable.get("REDIRECT_URI")
 
         # Spotipy initialization
         self.scope = "playlist-read-private playlist-read-collaborative"
