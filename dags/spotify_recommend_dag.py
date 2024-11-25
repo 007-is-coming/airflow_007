@@ -96,3 +96,24 @@ etl_task = PythonOperator(
 )
 
 etl_task
+
+def run_etl(**kwargs):
+    # 사용자 입력 값 가져오기
+    song_title = kwargs['dag_run'].conf.get('song_title', 'Default Song')
+    recommendations_data = extract_data_from_spotify(song_title)
+    load_data_to_db(recommendations_data)
+
+dag = DAG(
+    'spotify_etl_dag_recommend',
+    default_args=default_args,
+    description='ETL for Spotify Recommendations',
+    schedule_interval=None,  # 트리거로만 실행
+)
+
+etl_task = PythonOperator(
+    task_id='spotify_etl_task_recommend',
+    python_callable=run_etl,
+    provide_context=True,  # DAG 컨텍스트 전달
+    dag=dag,
+)
+

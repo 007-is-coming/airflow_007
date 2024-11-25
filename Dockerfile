@@ -21,3 +21,4 @@ RUN pip install --no-cache-dir \
     psycopg2-binary \
     spotipy \
     apache-airflow==2.10.3 \
+    pandas
