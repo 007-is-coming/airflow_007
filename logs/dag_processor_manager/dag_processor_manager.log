@@ -10384,3 +10384,1041 @@ File Path                                     PID  Runtime      # DAGs    # Erro
 /opt/airflow/dags/spotify_recommend_dag.py    167  0.01s             1           0  0.08s           2024-11-24T13:39:26
 ================================================================================
 [2024-11-24T13:40:14.422+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2024-11-25T00:28:15.947+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2024-11-25T00:28:15.949+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2024-11-25T00:28:15.949+0000] {manager.py:486} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-11-25T00:28:15.949+0000] {manager.py:726} INFO - Searching for files in /opt/airflow/dags
+[2024-11-25T00:28:15.953+0000] {manager.py:729} INFO - There are 4 files in /opt/airflow/dags
+[2024-11-25T00:28:16.016+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/spotify_playlist_dag.py      50  0.03s             0           0
+/opt/airflow/dags/spotify_class.py                                   0           0
+/opt/airflow/dags/django_sample.py                                   0           0
+/opt/airflow/dags/spotify_recommend_dag.py     51  0.03s             0           0
+================================================================================
+[2024-11-25T00:28:46.396+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spotify_class.py                                   0           0  0.06s           2024-11-25T00:28:16
+/opt/airflow/dags/django_sample.py                                   0           1  0.04s           2024-11-25T00:28:16
+/opt/airflow/dags/spotify_playlist_dag.py      61  0.01s             1           0  0.17s           2024-11-25T00:28:16
+/opt/airflow/dags/spotify_recommend_dag.py     62  0.00s             1           0  0.15s           2024-11-25T00:28:16
+================================================================================
+[2024-11-25T00:29:16.844+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spotify_class.py                                   0           0  0.03s           2024-11-25T00:28:46
+/opt/airflow/dags/django_sample.py                                   0           1  0.01s           2024-11-25T00:28:46
+/opt/airflow/dags/spotify_playlist_dag.py      78  0.01s             1           0  0.11s           2024-11-25T00:28:46
+/opt/airflow/dags/spotify_recommend_dag.py     79  0.00s             1           0  0.10s           2024-11-25T00:28:46
+================================================================================
+[2024-11-25T00:29:47.255+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spotify_class.py                                   0           0  0.03s           2024-11-25T00:29:16
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T00:29:16
+/opt/airflow/dags/spotify_playlist_dag.py      89  0.02s             1           0  0.09s           2024-11-25T00:29:16
+/opt/airflow/dags/spotify_recommend_dag.py     90  0.00s             1           0  0.09s           2024-11-25T00:29:16
+================================================================================
+[2024-11-25T00:30:17.728+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spotify_class.py                                   0           0  0.03s           2024-11-25T00:29:47
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:29:47
+/opt/airflow/dags/spotify_playlist_dag.py     100  0.01s             1           0  0.14s           2024-11-25T00:29:47
+/opt/airflow/dags/spotify_recommend_dag.py    101  0.00s             1           0  0.12s           2024-11-25T00:29:47
+================================================================================
+[2024-11-25T00:30:48.187+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spotify_class.py                                   0           0  0.03s           2024-11-25T00:30:17
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:30:17
+/opt/airflow/dags/spotify_playlist_dag.py     111  0.01s             1           0  0.12s           2024-11-25T00:30:17
+/opt/airflow/dags/spotify_recommend_dag.py    112  0.00s             1           0  0.11s           2024-11-25T00:30:17
+================================================================================
+[2024-11-25T00:31:18.682+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spotify_class.py                                   0           0  0.06s           2024-11-25T00:30:48
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:30:48
+/opt/airflow/dags/spotify_playlist_dag.py     130  0.01s             1           0  0.10s           2024-11-25T00:30:48
+/opt/airflow/dags/spotify_recommend_dag.py    131  0.00s             1           0  0.09s           2024-11-25T00:30:48
+================================================================================
+[2024-11-25T00:31:39.709+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2024-11-25T00:32:14.584+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2024-11-25T00:32:14.585+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2024-11-25T00:32:14.585+0000] {manager.py:486} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-11-25T00:32:14.585+0000] {manager.py:726} INFO - Searching for files in /opt/airflow/dags
+[2024-11-25T00:32:14.589+0000] {manager.py:729} INFO - There are 4 files in /opt/airflow/dags
+[2024-11-25T00:32:14.634+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/spotify_playlist_dag.py      49  0.03s             0           0
+/opt/airflow/dags/spotify_class.py                                   0           0
+/opt/airflow/dags/django_sample.py                                   0           0
+/opt/airflow/dags/spotify_recommend_dag.py     50  0.02s             0           0
+================================================================================
+[2024-11-25T00:32:45.131+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spotify_class.py                                   0           0  0.04s           2024-11-25T00:32:14
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T00:32:14
+/opt/airflow/dags/spotify_playlist_dag.py      66  0.01s             1           0  0.14s           2024-11-25T00:32:14
+/opt/airflow/dags/spotify_recommend_dag.py     67  0.00s             1           0  0.14s           2024-11-25T00:32:14
+================================================================================
+[2024-11-25T00:33:15.628+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spotify_class.py                                   0           0  0.03s           2024-11-25T00:32:45
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:32:45
+/opt/airflow/dags/spotify_playlist_dag.py      77  0.02s             1           0  0.10s           2024-11-25T00:32:45
+/opt/airflow/dags/spotify_recommend_dag.py     78  0.00s             1           0  0.10s           2024-11-25T00:32:45
+================================================================================
+[2024-11-25T00:33:46.062+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spotify_class.py                                   0           0  0.03s           2024-11-25T00:33:15
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:33:15
+/opt/airflow/dags/spotify_playlist_dag.py      88  0.02s             1           0  0.11s           2024-11-25T00:33:15
+/opt/airflow/dags/spotify_recommend_dag.py     89  0.00s             1           0  0.10s           2024-11-25T00:33:15
+================================================================================
+[2024-11-25T00:34:16.524+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spotify_class.py                                   0           0  0.03s           2024-11-25T00:33:46
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:33:46
+/opt/airflow/dags/spotify_playlist_dag.py     102  0.02s             1           0  0.13s           2024-11-25T00:33:46
+/opt/airflow/dags/spotify_recommend_dag.py    103  0.00s             1           0  0.11s           2024-11-25T00:33:46
+================================================================================
+[2024-11-25T00:34:46.995+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spotify_class.py                                   0           0  0.03s           2024-11-25T00:34:16
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:34:16
+/opt/airflow/dags/spotify_playlist_dag.py     114  0.03s             1           0  0.12s           2024-11-25T00:34:16
+/opt/airflow/dags/spotify_recommend_dag.py    115  0.01s             1           0  0.10s           2024-11-25T00:34:16
+================================================================================
+[2024-11-25T00:35:17.488+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spotify_class.py                                   0           0  0.04s           2024-11-25T00:34:47
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:34:47
+/opt/airflow/dags/spotify_playlist_dag.py     132  0.01s             1           0  0.17s           2024-11-25T00:34:47
+/opt/airflow/dags/spotify_recommend_dag.py    133  0.00s             1           0  0.13s           2024-11-25T00:34:47
+================================================================================
+[2024-11-25T00:35:47.917+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spotify_class.py                                   0           0  0.04s           2024-11-25T00:35:17
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:35:17
+/opt/airflow/dags/spotify_playlist_dag.py     143  0.01s             1           0  0.12s           2024-11-25T00:35:17
+/opt/airflow/dags/spotify_recommend_dag.py    144  0.00s             1           0  0.11s           2024-11-25T00:35:17
+================================================================================
+[2024-11-25T00:36:18.394+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spotify_class.py                                   0           0  0.03s           2024-11-25T00:35:48
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:35:48
+/opt/airflow/dags/spotify_playlist_dag.py     154  0.01s             1           0  0.12s           2024-11-25T00:35:48
+/opt/airflow/dags/spotify_recommend_dag.py    155  0.00s             1           0  0.11s           2024-11-25T00:35:48
+================================================================================
+[2024-11-25T00:36:48.859+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spotify_class.py                                   0           0  0.03s           2024-11-25T00:36:18
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:36:18
+/opt/airflow/dags/spotify_playlist_dag.py     168  0.02s             1           0  0.12s           2024-11-25T00:36:18
+/opt/airflow/dags/spotify_recommend_dag.py    169  0.00s             1           0  0.11s           2024-11-25T00:36:18
+================================================================================
+[2024-11-25T00:37:15.260+0000] {manager.py:726} INFO - Searching for files in /opt/airflow/dags
+[2024-11-25T00:37:15.274+0000] {manager.py:729} INFO - There are 4 files in /opt/airflow/dags
+[2024-11-25T00:37:19.337+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spotify_class.py                                   0           0  0.03s           2024-11-25T00:36:48
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:36:49
+/opt/airflow/dags/spotify_playlist_dag.py     184  0.02s             1           0  0.13s           2024-11-25T00:36:48
+/opt/airflow/dags/spotify_recommend_dag.py    185  0.00s             1           0  0.12s           2024-11-25T00:36:48
+================================================================================
+[2024-11-25T00:37:49.769+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spotify_class.py                                   0           0  0.03s           2024-11-25T00:37:19
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:37:19
+/opt/airflow/dags/spotify_playlist_dag.py     195  0.02s             1           0  0.09s           2024-11-25T00:37:19
+/opt/airflow/dags/spotify_recommend_dag.py    196  0.00s             1           0  0.08s           2024-11-25T00:37:19
+================================================================================
+[2024-11-25T00:38:20.281+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spotify_class.py                                   0           0  0.03s           2024-11-25T00:37:49
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:37:49
+/opt/airflow/dags/spotify_playlist_dag.py     206  0.02s             1           0  0.14s           2024-11-25T00:37:49
+/opt/airflow/dags/spotify_recommend_dag.py    207  0.01s             1           0  0.12s           2024-11-25T00:37:49
+================================================================================
+[2024-11-25T00:38:50.700+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spotify_class.py                                   0           0  0.04s           2024-11-25T00:38:20
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T00:38:20
+/opt/airflow/dags/spotify_playlist_dag.py     217  0.01s             1           0  0.12s           2024-11-25T00:38:20
+/opt/airflow/dags/spotify_recommend_dag.py    218  0.01s             1           0  0.11s           2024-11-25T00:38:20
+================================================================================
+[2024-11-25T00:39:21.130+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spotify_class.py                                   0           0  0.03s           2024-11-25T00:38:50
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:38:50
+/opt/airflow/dags/spotify_playlist_dag.py     239  0.01s             1           0  0.12s           2024-11-25T00:38:50
+/opt/airflow/dags/spotify_recommend_dag.py    240  0.00s             1           0  0.11s           2024-11-25T00:38:50
+================================================================================
+[2024-11-25T00:39:51.555+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spotify_class.py                                   0           0  0.03s           2024-11-25T00:39:21
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:39:21
+/opt/airflow/dags/spotify_playlist_dag.py     250  0.01s             1           0  0.09s           2024-11-25T00:39:21
+/opt/airflow/dags/spotify_recommend_dag.py    251  0.00s             1           0  0.08s           2024-11-25T00:39:21
+================================================================================
+[2024-11-25T00:40:02.055+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2024-11-25T00:41:52.132+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2024-11-25T00:41:52.132+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2024-11-25T00:41:52.132+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-11-25T00:41:52.133+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2024-11-25T00:41:52.137+0000] {manager.py:824} INFO - There are 4 files in /opt/airflow/dags
+[2024-11-25T00:41:52.218+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py      63  0.01s             0           0                                                   0
+/opt/airflow/dags/spotify_class.py                                   0           0                                                   0
+/opt/airflow/dags/django_sample.py                                   0           0                                                   0
+/opt/airflow/dags/spotify_recommend_dag.py     64  0.01s             0           0                                                   0
+================================================================================
+[2024-11-25T00:42:23.126+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py     74  0.00s             1           0  0.52s           2024-11-25T00:41:52                      41
+/opt/airflow/dags/spotify_playlist_dag.py      73  0.01s             1           0  0.52s           2024-11-25T00:41:52                      41
+/opt/airflow/dags/spotify_class.py                                   0           0  0.06s           2024-11-25T00:41:52                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.04s           2024-11-25T00:41:52                       5
+================================================================================
+[2024-11-25T00:42:53.800+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py      89  0.02s             1           0  0.29s           2024-11-25T00:42:23                      12
+/opt/airflow/dags/spotify_recommend_dag.py     90  0.01s             1           0  0.28s           2024-11-25T00:42:23                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.07s           2024-11-25T00:42:23                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T00:42:23                       5
+================================================================================
+[2024-11-25T00:43:24.304+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py     108  0.02s             1           0  0.13s           2024-11-25T00:42:53                      12
+/opt/airflow/dags/spotify_recommend_dag.py    109  0.00s             1           0  0.12s           2024-11-25T00:42:53                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.03s           2024-11-25T00:42:53                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:42:53                       5
+================================================================================
+[2024-11-25T00:43:54.962+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py     118  0.03s             1           0  0.29s           2024-11-25T00:43:24                      12
+/opt/airflow/dags/spotify_recommend_dag.py    119  0.00s             1           0  0.27s           2024-11-25T00:43:24                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.03s           2024-11-25T00:43:24                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:43:24                       5
+================================================================================
+[2024-11-25T00:44:25.822+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py     128  0.02s             1           0  0.33s           2024-11-25T00:43:55                      12
+/opt/airflow/dags/spotify_recommend_dag.py    129  0.00s             1           0  0.31s           2024-11-25T00:43:55                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.03s           2024-11-25T00:43:55                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:43:55                       5
+================================================================================
+[2024-11-25T00:44:56.574+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py     144  0.01s             1           0  0.39s           2024-11-25T00:44:26                      12
+/opt/airflow/dags/spotify_recommend_dag.py    145  0.00s             1           0  0.37s           2024-11-25T00:44:26                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.04s           2024-11-25T00:44:26                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:44:26                       5
+================================================================================
+[2024-11-25T00:45:27.309+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py     154  0.02s             1           0  0.29s           2024-11-25T00:44:56                      12
+/opt/airflow/dags/spotify_recommend_dag.py    155  0.00s             1           0  0.29s           2024-11-25T00:44:56                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.10s           2024-11-25T00:44:56                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:44:56                       5
+================================================================================
+[2024-11-25T00:45:57.995+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py     164  0.01s             1           0  0.30s           2024-11-25T00:45:27                      12
+/opt/airflow/dags/spotify_recommend_dag.py    165  0.00s             1           0  0.27s           2024-11-25T00:45:27                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.10s           2024-11-25T00:45:27                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:45:27                       5
+================================================================================
+[2024-11-25T00:46:28.609+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py     174  0.01s             1           0  0.19s           2024-11-25T00:45:58                      12
+/opt/airflow/dags/spotify_recommend_dag.py    175  0.00s             1           0  0.19s           2024-11-25T00:45:58                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.12s           2024-11-25T00:45:58                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:45:58                       5
+================================================================================
+[2024-11-25T00:46:52.212+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2024-11-25T00:46:52.225+0000] {manager.py:824} INFO - There are 4 files in /opt/airflow/dags
+[2024-11-25T00:46:59.325+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.22s           2024-11-25T00:46:45                      12
+/opt/airflow/dags/spotify_recommend_dag.py    185  0.01s             1           0  0.21s           2024-11-25T00:46:28                      12
+/opt/airflow/dags/spotify_class.py            186  0.00s             0           0  0.10s           2024-11-25T00:46:28                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:46:28                       5
+================================================================================
+[2024-11-25T00:47:29.875+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py    205  0.01s             1           0  0.27s           2024-11-25T00:46:59                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.17s           2024-11-25T00:47:15                      12
+/opt/airflow/dags/spotify_class.py            206  0.00s             0           0  0.08s           2024-11-25T00:46:59                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.04s           2024-11-25T00:46:59                       5
+================================================================================
+[2024-11-25T00:48:00.404+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.20s           2024-11-25T00:47:46                      12
+/opt/airflow/dags/spotify_recommend_dag.py    215  0.01s             1           0  0.19s           2024-11-25T00:47:30                      12
+/opt/airflow/dags/spotify_class.py            216  0.00s             0           0  0.16s           2024-11-25T00:47:30                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T00:47:30                       5
+================================================================================
+[2024-11-25T00:48:30.662+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.57s           2024-11-25T00:48:17                      12
+/opt/airflow/dags/spotify_recommend_dag.py    224  0.03s             1           0  0.21s           2024-11-25T00:48:00                      12
+/opt/airflow/dags/spotify_class.py            225  0.00s             0           0  0.17s           2024-11-25T00:48:00                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T00:48:00                       5
+================================================================================
+[2024-11-25T00:49:00.702+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.38s           2024-11-25T00:48:31                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.34s           2024-11-25T00:48:48                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.33s           2024-11-25T00:48:30                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.04s           2024-11-25T00:48:31                       5
+================================================================================
+[2024-11-25T00:49:30.741+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.76s           2024-11-25T00:49:19                      12
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.27s           2024-11-25T00:49:01                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.21s           2024-11-25T00:49:01                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.04s           2024-11-25T00:49:01                       5
+================================================================================
+[2024-11-25T00:50:01.260+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.20s           2024-11-25T00:49:50                      12
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.12s           2024-11-25T00:49:31                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.07s           2024-11-25T00:49:31                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T00:49:31                       5
+================================================================================
+[2024-11-25T00:50:31.735+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.13s           2024-11-25T00:50:02                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.10s           2024-11-25T00:50:02                       3
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.08s           2024-11-25T00:50:20                      12
+/opt/airflow/dags/django_sample.py                                   0           1  0.04s           2024-11-25T00:50:02                       5
+================================================================================
+[2024-11-25T00:50:45.795+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2024-11-25T00:54:51.036+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2024-11-25T00:54:51.037+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2024-11-25T00:54:51.038+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-11-25T00:54:51.038+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2024-11-25T00:54:51.046+0000] {manager.py:824} INFO - There are 4 files in /opt/airflow/dags
+[2024-11-25T00:54:51.152+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py      63  0.02s             0           0                                                   0
+/opt/airflow/dags/spotify_class.py                                   0           0                                                   0
+/opt/airflow/dags/django_sample.py                                   0           0                                                   0
+/opt/airflow/dags/spotify_recommend_dag.py     64  0.01s             0           0                                                   0
+================================================================================
+[2024-11-25T00:55:21.780+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py     73  0.00s             1           0  0.22s           2024-11-25T00:54:51                      12
+/opt/airflow/dags/spotify_playlist_dag.py      72  0.02s             1           0  0.21s           2024-11-25T00:54:51                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.05s           2024-11-25T00:54:51                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T00:54:51                       5
+================================================================================
+[2024-11-25T00:55:52.365+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py      82  0.02s             1           0  0.15s           2024-11-25T00:55:21                      12
+/opt/airflow/dags/spotify_recommend_dag.py     83  0.01s             1           0  0.13s           2024-11-25T00:55:21                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.04s           2024-11-25T00:55:21                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:55:21                       5
+================================================================================
+[2024-11-25T00:56:22.850+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py      98  0.02s             1           0  0.15s           2024-11-25T00:55:52                      12
+/opt/airflow/dags/spotify_recommend_dag.py     99  0.00s             1           0  0.13s           2024-11-25T00:55:52                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.04s           2024-11-25T00:55:52                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:55:52                       5
+================================================================================
+[2024-11-25T00:56:53.494+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py     123  0.01s             1           0  0.29s           2024-11-25T00:56:23                      12
+/opt/airflow/dags/spotify_recommend_dag.py    124  0.00s             1           0  0.27s           2024-11-25T00:56:23                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.04s           2024-11-25T00:56:23                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:56:23                       5
+================================================================================
+[2024-11-25T00:57:23.602+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.32s           2024-11-25T00:56:53                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.22s           2024-11-25T00:57:21                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.04s           2024-11-25T00:56:53                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T00:56:53                       5
+================================================================================
+[2024-11-25T00:57:53.942+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.27s           2024-11-25T00:57:52                      12
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.22s           2024-11-25T00:57:24                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.07s           2024-11-25T00:57:24                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T00:57:24                       5
+================================================================================
+[2024-11-25T00:58:24.537+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.27s           2024-11-25T00:58:22                      12
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.25s           2024-11-25T00:57:55                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.20s           2024-11-25T00:57:55                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T00:57:55                       5
+================================================================================
+[2024-11-25T00:58:54.685+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.20s           2024-11-25T00:58:25                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.20s           2024-11-25T00:58:50                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.16s           2024-11-25T00:58:25                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T00:58:25                       5
+================================================================================
+[2024-11-25T00:59:24.774+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.60s           2024-11-25T00:59:21                      12
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.32s           2024-11-25T00:58:56                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.28s           2024-11-25T00:58:56                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T00:58:56                       5
+================================================================================
+[2024-11-25T00:59:51.094+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2024-11-25T00:59:51.102+0000] {manager.py:824} INFO - There are 4 files in /opt/airflow/dags
+[2024-11-25T00:59:55.160+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.30s           2024-11-25T00:59:27                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.24s           2024-11-25T00:59:27                       3
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.16s           2024-11-25T00:59:49                      12
+/opt/airflow/dags/django_sample.py                                   0           1  0.11s           2024-11-25T00:59:27                       5
+================================================================================
+[2024-11-25T01:00:25.703+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.12s           2024-11-25T00:59:58                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.09s           2024-11-25T01:00:05                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.07s           2024-11-25T00:59:58                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T00:59:58                       5
+================================================================================
+[2024-11-25T01:00:56.155+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.17s           2024-11-25T01:00:28                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.10s           2024-11-25T01:00:28                       3
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.10s           2024-11-25T01:00:36                      12
+/opt/airflow/dags/django_sample.py                                   0           1  0.05s           2024-11-25T01:00:28                       5
+================================================================================
+[2024-11-25T01:01:26.664+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.19s           2024-11-25T01:00:59                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.13s           2024-11-25T01:00:59                       3
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.08s           2024-11-25T01:01:06                      12
+/opt/airflow/dags/django_sample.py                                   0           1  0.04s           2024-11-25T01:00:59                       5
+================================================================================
+[2024-11-25T01:01:57.546+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.20s           2024-11-25T01:01:29                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.13s           2024-11-25T01:01:55                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.11s           2024-11-25T01:01:29                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.05s           2024-11-25T01:01:29                       5
+================================================================================
+[2024-11-25T01:02:28.269+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.13s           2024-11-25T01:02:15                      12
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.13s           2024-11-25T01:02:00                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.08s           2024-11-25T01:02:00                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.04s           2024-11-25T01:02:00                       5
+================================================================================
+[2024-11-25T01:02:58.748+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.13s           2024-11-25T01:02:31                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.11s           2024-11-25T01:02:44                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.08s           2024-11-25T01:02:31                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T01:02:31                       5
+================================================================================
+[2024-11-25T01:03:29.267+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.11s           2024-11-25T01:03:01                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.10s           2024-11-25T01:02:59                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.07s           2024-11-25T01:03:01                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T01:03:01                       5
+================================================================================
+[2024-11-25T01:03:59.792+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.11s           2024-11-25T01:03:32                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.10s           2024-11-25T01:03:30                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.07s           2024-11-25T01:03:32                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T01:03:32                       5
+================================================================================
+[2024-11-25T01:04:30.474+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.12s           2024-11-25T01:04:13                      12
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.11s           2024-11-25T01:04:03                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.07s           2024-11-25T01:04:03                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T01:04:03                       5
+================================================================================
+[2024-11-25T01:04:51.871+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2024-11-25T01:04:51.883+0000] {manager.py:824} INFO - There are 4 files in /opt/airflow/dags
+[2024-11-25T01:05:00.990+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.12s           2024-11-25T01:04:33                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.12s           2024-11-25T01:04:32                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.07s           2024-11-25T01:04:33                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.04s           2024-11-25T01:04:33                       5
+================================================================================
+[2024-11-25T01:05:31.599+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.18s           2024-11-25T01:05:03                      12
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.11s           2024-11-25T01:05:04                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.09s           2024-11-25T01:05:04                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T01:05:04                       5
+================================================================================
+[2024-11-25T01:06:02.128+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.12s           2024-11-25T01:05:59                      12
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.11s           2024-11-25T01:05:34                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.08s           2024-11-25T01:05:34                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T01:05:34                       5
+================================================================================
+[2024-11-25T01:06:32.716+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.15s           2024-11-25T01:06:29                      12
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.14s           2024-11-25T01:06:05                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.09s           2024-11-25T01:06:05                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.04s           2024-11-25T01:06:05                       5
+================================================================================
+[2024-11-25T01:07:03.196+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.11s           2024-11-25T01:07:00                      12
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.10s           2024-11-25T01:06:35                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.05s           2024-11-25T01:06:35                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T01:06:35                       5
+================================================================================
+[2024-11-25T01:07:33.662+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.12s           2024-11-25T01:07:30                      12
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.11s           2024-11-25T01:07:06                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.06s           2024-11-25T01:07:06                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.04s           2024-11-25T01:07:06                       5
+================================================================================
+[2024-11-25T01:08:04.225+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.10s           2024-11-25T01:07:36                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.10s           2024-11-25T01:08:01                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.07s           2024-11-25T01:07:36                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T01:07:36                       5
+================================================================================
+[2024-11-25T01:08:34.719+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.14s           2024-11-25T01:08:07                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.10s           2024-11-25T01:08:25                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.08s           2024-11-25T01:08:07                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.04s           2024-11-25T01:08:07                       5
+================================================================================
+[2024-11-25T01:09:05.278+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.12s           2024-11-25T01:08:37                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.11s           2024-11-25T01:08:56                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.08s           2024-11-25T01:08:37                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.04s           2024-11-25T01:08:37                       5
+================================================================================
+[2024-11-25T01:09:35.709+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.10s           2024-11-25T01:09:08                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.10s           2024-11-25T01:09:26                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.06s           2024-11-25T01:09:08                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.04s           2024-11-25T01:09:08                       5
+================================================================================
+[2024-11-25T01:09:52.027+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2024-11-25T01:09:52.043+0000] {manager.py:824} INFO - There are 4 files in /opt/airflow/dags
+[2024-11-25T01:10:06.368+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.11s           2024-11-25T01:09:38                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.09s           2024-11-25T01:10:02                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.07s           2024-11-25T01:09:38                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.02s           2024-11-25T01:09:38                       5
+================================================================================
+[2024-11-25T01:10:36.923+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.10s           2024-11-25T01:10:09                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.10s           2024-11-25T01:10:10                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.06s           2024-11-25T01:10:09                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.04s           2024-11-25T01:10:09                       5
+================================================================================
+[2024-11-25T01:11:06.990+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.13s           2024-11-25T01:10:40                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.11s           2024-11-25T01:11:00                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.08s           2024-11-25T01:10:40                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T01:10:40                       5
+================================================================================
+[2024-11-25T01:11:37.641+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.14s           2024-11-25T01:11:11                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.11s           2024-11-25T01:11:17                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.08s           2024-11-25T01:11:11                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.04s           2024-11-25T01:11:11                       5
+================================================================================
+[2024-11-25T01:12:08.102+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.13s           2024-11-25T01:11:41                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.08s           2024-11-25T01:11:41                       3
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.08s           2024-11-25T01:11:47                      12
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T01:11:41                       5
+================================================================================
+[2024-11-25T01:12:38.815+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.13s           2024-11-25T01:12:12                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.08s           2024-11-25T01:12:37                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.07s           2024-11-25T01:12:12                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.04s           2024-11-25T01:12:12                       5
+================================================================================
+[2024-11-25T01:13:09.490+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.10s           2024-11-25T01:13:04                      12
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.09s           2024-11-25T01:12:42                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.06s           2024-11-25T01:12:42                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T01:12:42                       5
+================================================================================
+[2024-11-25T01:13:39.974+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.10s           2024-11-25T01:13:13                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.10s           2024-11-25T01:13:23                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.06s           2024-11-25T01:13:13                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T01:13:13                       5
+================================================================================
+[2024-11-25T01:14:10.482+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.19s           2024-11-25T01:13:44                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.13s           2024-11-25T01:13:44                       3
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.08s           2024-11-25T01:13:54                      12
+/opt/airflow/dags/django_sample.py                                   0           1  0.05s           2024-11-25T01:13:44                       5
+================================================================================
+[2024-11-25T01:14:41.072+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.15s           2024-11-25T01:14:14                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.09s           2024-11-25T01:14:24                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.08s           2024-11-25T01:14:14                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.04s           2024-11-25T01:14:14                       5
+================================================================================
+[2024-11-25T01:14:52.403+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2024-11-25T01:14:52.413+0000] {manager.py:824} INFO - There are 4 files in /opt/airflow/dags
+[2024-11-25T01:15:11.709+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.19s           2024-11-25T01:14:45                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.14s           2024-11-25T01:14:55                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.10s           2024-11-25T01:14:45                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.04s           2024-11-25T01:14:45                       5
+================================================================================
+[2024-11-25T01:15:42.437+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.11s           2024-11-25T01:15:37                      12
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.11s           2024-11-25T01:15:15                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.07s           2024-11-25T01:15:15                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T01:15:15                       5
+================================================================================
+[2024-11-25T01:16:12.979+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.17s           2024-11-25T01:16:08                      12
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.13s           2024-11-25T01:15:46                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.07s           2024-11-25T01:15:46                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.04s           2024-11-25T01:15:46                       5
+================================================================================
+[2024-11-25T01:16:43.470+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.11s           2024-11-25T01:16:17                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.09s           2024-11-25T01:16:39                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.07s           2024-11-25T01:16:17                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T01:16:17                       5
+================================================================================
+[2024-11-25T01:17:13.969+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.12s           2024-11-25T01:16:47                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.11s           2024-11-25T01:17:10                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.06s           2024-11-25T01:16:47                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.04s           2024-11-25T01:16:47                       5
+================================================================================
+[2024-11-25T01:17:44.571+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.14s           2024-11-25T01:17:18                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.10s           2024-11-25T01:17:26                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.08s           2024-11-25T01:17:18                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.05s           2024-11-25T01:17:18                       5
+================================================================================
+[2024-11-25T01:18:15.299+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.20s           2024-11-25T01:17:48                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.10s           2024-11-25T01:17:48                       3
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.09s           2024-11-25T01:18:09                      12
+/opt/airflow/dags/django_sample.py                                   0           1  0.05s           2024-11-25T01:17:48                       5
+================================================================================
+[2024-11-25T01:18:45.827+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.13s           2024-11-25T01:18:39                      12
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.09s           2024-11-25T01:18:22                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.06s           2024-11-25T01:18:19                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T01:18:19                       5
+================================================================================
+[2024-11-25T01:19:16.308+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.11s           2024-11-25T01:18:58                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.10s           2024-11-25T01:19:10                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.06s           2024-11-25T01:18:49                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.03s           2024-11-25T01:18:49                       5
+================================================================================
+[2024-11-25T01:19:46.754+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/spotify_recommend_dag.py                           1           0  0.12s           2024-11-25T01:19:28                      12
+/opt/airflow/dags/spotify_playlist_dag.py                            1           0  0.10s           2024-11-25T01:19:40                      12
+/opt/airflow/dags/spotify_class.py                                   0           0  0.10s           2024-11-25T01:19:20                       3
+/opt/airflow/dags/django_sample.py                                   0           1  0.06s           2024-11-25T01:19:20                       5
+================================================================================
+[2024-11-25T01:19:53.031+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2024-11-25T01:19:53.039+0000] {manager.py:824} INFO - There are 4 files in /opt/airflow/dags

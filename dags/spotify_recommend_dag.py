@@ -7,6 +7,7 @@ from airflow.operators.python import PythonOperator
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 from datetime import datetime, timedelta
 from spotify_class import SpotifyClient
+import psycopg2
 
 
 def extract_data_from_spotify(song_title):
@@ -21,9 +22,17 @@ def load_data_to_db(recommendations_data):
         print("No data to load.")
         return
 
-    # Postgres 연결 설정 (PostgresHook 사용)
-    pg_hook = PostgresHook(postgres_conn_id='playlist')  # Airflow에서 설정한 연결 ID 사용
-    conn = pg_hook.get_conn()
+    pg_hook = PostgresHook(postgres_conn_id='playlist')  # 연결 ID 사용
+    conn_tmp = pg_hook.get_connection(pg_hook.postgres_conn_id)
+    # 직접 psycopg2로 연결하고 인코딩을 설정
+    conn = psycopg2.connect(
+        host=conn_tmp.host,
+        database=conn_tmp.schema,
+        user=conn_tmp.login,
+        password=conn_tmp.password,
+        port=conn_tmp.port,
+        client_encoding='UTF8'  # 인코딩 설정
+    )
     cursor = conn.cursor()
 
     # 기존 songs 테이블 드롭
