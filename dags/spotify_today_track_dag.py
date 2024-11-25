@@ -9,15 +9,16 @@ from datetime import datetime, timedelta
 from spotify_class import SpotifyClient
 import psycopg2
 
+
 def extract_data_from_spotify():
     """ Spotify에서 추천곡을 가져오는 함수 """
     spotify_client = SpotifyClient()
-    today_playlists_data = spotify_client.get_top_10_playlists()
-    return today_playlists_data
+    top_tracks = spotify_client.get_top_10_tracks_from_playlist()
+    return top_tracks
 
-def load_data_to_db(today_playlists_data):
+def load_data_to_db(top_tracks):
     """ 데이터베이스에 데이터 로드 """
-    if not today_playlists_data:
+    if not top_tracks:
         print("No data to load.")
         return
 
@@ -35,11 +36,11 @@ def load_data_to_db(today_playlists_data):
     cursor = conn.cursor()
 
     # 기존 songs 테이블 드롭
-    cursor.execute("DROP TABLE IF EXISTS playlist_schema.spotify_today_playlists")
+    cursor.execute("DROP TABLE IF EXISTS playlist_schema.spotify_today_tracks")
 
     # songs 테이블 생성 (no는 SERIAL PK로 설정)
     create_table_query = """
-    CREATE TABLE playlist_schema.spotify_today_playlists (
+    CREATE TABLE playlist_schema.spotify_today_tracks (
         no SERIAL PRIMARY KEY,
         title VARCHAR(256),
         link VARCHAR(256),
@@ -48,10 +49,11 @@ def load_data_to_db(today_playlists_data):
     """
     cursor.execute(create_table_query)
 
+
     # 데이터를 songs 테이블에 삽입
-    for song in today_playlists_data:
+    for song in top_tracks:
         insert_query = """
-        INSERT INTO playlist_schema.spotify_today_playlists (title, link, cover_image)
+        INSERT INTO playlist_schema.spotify_today_tracks (title, link, cover_image)
         VALUES (%s, %s, %s)
         """
         cursor.execute(insert_query, (song['title'], song['link'], song['cover_image']))
@@ -59,7 +61,7 @@ def load_data_to_db(today_playlists_data):
     conn.commit()
     cursor.close()
     conn.close()
-    return 
+
 
 # Airflow DAG 정의
 default_args = {
@@ -70,20 +72,20 @@ default_args = {
 }
 
 dag = DAG(
-    'spotify_etl_dag_today_playlists',  # DAG 이름
+    'spotify_etl_dag_today_track',  # DAG 이름
     default_args=default_args,
-    description='ETL for Spotify today playlists',
-    schedule_interval='@daily', 
+    description='ETL for Spotify Recommendations',
+    schedule_interval='@daily',  # 추후 클릭 webhook 이벤트로 교체해야함
 )
 
 # Airflow Task 정의
 def run_etl():
-    today_play_list_data = extract_data_from_spotify()
-    load_data_to_db(today_play_list_data)
+    top_tracks = extract_data_from_spotify()
+    load_data_to_db(top_tracks)
 
 # DAG 안에서 Task 연결
 etl_task = PythonOperator(
-    task_id='spotify_etl_task_today_playlists',
+    task_id='spotify_etl_task_today_track',
     python_callable=run_etl,
     dag=dag,
 )

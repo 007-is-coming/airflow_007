@@ -106,3 +106,27 @@ class SpotifyClient:
             today_playlists_data.append(playlist_info)
             
         return today_playlists_data
+    
+    def get_top_10_tracks_from_playlist(self):
+        # 'Global Top 50' 플레이리스트 ID
+        global_top_50_playlist_id = '37i9dQZEVXbMDoHDwVN2tF'  # 이 ID는 Spotify Global Top 50 플레이리스트의 ID입니다.
+        
+        # 플레이리스트에서 트랙 가져오기
+        results = self.sp.playlist_tracks(global_top_50_playlist_id, limit=10)
+
+        if not results['items']:
+            print("No tracks found in the playlist.")
+            return
+
+        top_songs = []
+        for item in results['items']:
+            track = item['track']  # 트랙 정보는 'track' 키 아래에 존재합니다.
+            album_cover_url = track['album']['images'][0]['url'] if track['album']['images'] else 'No image available'
+            song_info = {
+                "title": track['name'],
+                "link": track['external_urls']['spotify'],
+                "cover_image": album_cover_url
+            }
+            top_songs.append(song_info)
+
+        return top_songs
