@@ -96,7 +96,8 @@ dag = DAG(
     'spotify_etl_dag_today_track',  # DAG 이름
     default_args=default_args,
     description='ETL for Spotify Recommendations',
-    schedule_interval='@daily',  # 추후 클릭 webhook 이벤트로 교체해야함
+    schedule_interval='0 0 * * *',  # 매일 오후 12시 정각 실행 (CRON 표현식)
+    catchup=False,  # 과거에 실행되지 않은 DAG를 실행하지 않도록 설정
 )
 
 # Airflow Task 정의

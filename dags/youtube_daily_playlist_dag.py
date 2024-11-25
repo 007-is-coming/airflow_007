@@ -24,7 +24,7 @@ def extract_data_from_youtube():
     youtube_client = YoutubeClient()
     daily_youtube_video_df, daily_youtube_playlist_df = youtube_client.daily_youtube()
     logger.info(f"youtube daily _ youtube 데일리 데이터를 성공적으로 가져왔습니다: {daily_youtube_video_df}, {daily_youtube_playlist_df}")
-    return daily_youtube_video_df, daily_youtube_playlist_df
+    return daily_youtube_video_df
 
 def bulk_insert_table(cursor, conn, df, table_name):
     """
@@ -46,9 +46,9 @@ def bulk_insert_table(cursor, conn, df, table_name):
     finally:
         buffer.close()
 
-def load_data_to_db(daily_youtube_video_df, daily_youtube_playlist_df):
+def load_data_to_db(daily_youtube_video_df):
     """ 데이터베이스에 데이터 로드 """
-    if daily_youtube_video_df.empty or daily_youtube_playlist_df.empty:
+    if daily_youtube_video_df.empty:
         logger.warning("youtube daily _ 빈 테이블이 있습니다.")
         return
 
@@ -110,13 +110,14 @@ dag = DAG(
     'youtube_etl_dag_daily_playlists',  # DAG 이름
     default_args=default_args,
     description='ETL for YouTube daily playlists',
-    schedule_interval='@daily', 
+    schedule_interval='0 0 * * *',  # 자정 
+    catchup=False,  # 과거에 실행되지 않은 DAG를 실행하지 않도록 설정
 )
 
 # Airflow Task 정의
 def run_etl():
-    daily_youtube_video_df, daily_youtube_playlist_df = extract_data_from_youtube()
-    load_data_to_db(daily_youtube_video_df, daily_youtube_playlist_df)
+    daily_youtube_video_df= extract_data_from_youtube()
+    load_data_to_db(daily_youtube_video_df)
 
 # DAG 안에서 Task 연결
 etl_task = PythonOperator(
