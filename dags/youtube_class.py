@@ -10,9 +10,9 @@ from airflow.providers.postgres.hooks.postgres import PostgresHook
 
 class YoutubeClient:
     def __init__(self):
-        API_KEY = Variable.get("API_KEY") # airflow Var
-        SEARCH_URL = Variable.get("SEARCH_URL")
-        BASE_URL = Variable.get("BASE_URL")
+        self.API_KEY = Variable.get("API_KEY") # airflow Var
+        self.SEARCH_URL = Variable.get("SEARCH_URL")
+        self.BASE_URL = Variable.get("BASE_URL")
 
     def search_youtube(self, song_title, max_results=10):
         """
