@@ -64,7 +64,7 @@ class SpotifyClient:
         print(f"Found track: {track['name']} by {track['artists'][0]['name']}")
 
         # 해당 트랙을 포함한 플레이리스트 검색
-        playlists = self.sp.search(q=track['name'], type='playlist', limit=5)
+        playlists = self.sp.search(q=track['name'], type='playlist', limit=10)
         
         if not playlists['playlists']['items']:
             print("No playlists found containing this song.")
