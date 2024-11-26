@@ -118,6 +118,7 @@ services:
   airflow-webserver:
     <<: *airflow-common
     command: webserver
+    container_name: airflow_007-airflow-webserver  # 컨테이너 이름 명시
     ports:
       - "8080:8080"
     healthcheck:

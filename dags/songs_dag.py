@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 def extract_data_from_site(song_title):
     """ Spotify에서 추천곡을 가져오는 함수 """
     youtube_client = YoutubeClient()
-    search_video_df, search_playlist_df = youtube_client.search_youtube(song_title)
+    search_video_df, search_playlist_df = youtube_client.search_youtube(song_title + " music")
     logger.info(f"youtube 추천곡 _ 데이터를 성공적으로 가져왔습니다: {search_video_df}, {search_playlist_df}")
     
     """ Spotify에서 추천곡을 가져오는 함수 """
@@ -202,22 +202,29 @@ default_args = {
 dag = DAG(
     'etl_dag_search_songs',  # DAG 이름
     default_args=default_args,
-    description='ETL for recommend Playlists',
-    schedule_interval='@daily',  # 추후 클릭 webhook 이벤트로 교체해야함
+    description='ETL for recommend songs',
+    schedule_interval= None,  # 추후 클릭 webhook 이벤트로 교체해야함
+    catchup = False,
 )
 
+
 # Airflow Task 정의
-def run_etl(song_title):
-    search_video_df, recommendations_data = extract_data_from_site(song_title)
-    load_data_to_db(search_video_df, recommendations_data)
+def run_etl(**kwargs):
+    # conf에서 song_title 받아오기
+    song_title = kwargs['dag_run'].conf.get('input_value')
+    
+    if song_title:
+        song_title = song_title
+        search_video_df, recommendations_data = extract_data_from_site(song_title)
+        load_data_to_db(search_video_df, recommendations_data)
+    else:
+        logger.error("song_title이 conf에서 제공되지 않았습니다.")
 
 # DAG 안에서 Task 연결
-song_title = 'Shape of You'  # Django를 airflow Variable로 받아오기
-song_title = song_title + " music"
 etl_task = PythonOperator(
-    task_id='etl_task_playlist',
+    task_id='etl_task_tracks',
     python_callable=run_etl,
-    op_args=[song_title],
+    provide_context=True,  # dag_run을 context로 제공
     dag=dag,
 )
 

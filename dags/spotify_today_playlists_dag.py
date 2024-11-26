@@ -135,6 +135,7 @@ dag = DAG(
     catchup=False,  # 과거에 실행되지 않은 DAG를 실행하지 않도록 설정
 )
 
+
 # Airflow Task 정의
 def run_etl():
     today_play_list_data = extract_data_from_spotify()

@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 def extract_data_from_site(song_title):
     """ youtube에서 playlist를 가져오는 함수 """
     youtube_client = YoutubeClient()
-    search_video_df, search_playlist_df = youtube_client.search_youtube(song_title)
+    search_video_df, search_playlist_df = youtube_client.search_youtube(song_title + " music")
     logger.info(f"youtube 검색 _ 데이터를 성공적으로 가져왔습니다: {search_video_df}, {search_playlist_df}")
     
     """spotify에서 playlist를 가지고 오는 함수"""
@@ -55,12 +55,12 @@ def bulk_insert_table(cursor, conn, df, table_name):
 def transform_schema(cursor):
     # search_playlist
     # 1. 테이블 삭제
-    drop_table_query = "DROP TABLE IF EXISTS django_schema.search_palylists;"
+    drop_table_query = "DROP TABLE IF EXISTS django_schema.search_playlist;"
     cursor.execute(drop_table_query)
 
     # 2. 테이블 생성
     create_table_query = """
-    CREATE TABLE django_schema.search_palylists (
+    CREATE TABLE django_schema.search_playlist (
         no SERIAL PRIMARY KEY,
         playlist_title VARCHAR(255) NOT NULL,
         playlist_url VARCHAR(255) NOT NULL,
@@ -193,21 +193,27 @@ dag = DAG(
     'etl_dag_playlist',  # DAG 이름
     default_args=default_args,
     description='ETL for recommend Playlists',
-    schedule_interval='@daily',  # 추후 클릭 webhook 이벤트로 교체해야함
+    schedule_interval=None,  # 추후 클릭 webhook 이벤트로 교체해야함
+    catchup = False,
 )
 
 # Airflow Task 정의
-def run_etl(song_title):
-    search_playlist_df, playlist_data = extract_data_from_site(song_title)
-    load_data_to_db(search_playlist_df, playlist_data)
+def run_etl(**kwargs):
+    # conf에서 song_title 받아오기
+    song_title = kwargs['dag_run'].conf.get('input_value')
+    
+    if song_title:
+        song_title = song_title
+        search_playlist_df, playlist_data = extract_data_from_site(song_title)
+        load_data_to_db(search_playlist_df, playlist_data)
+    else:
+        logger.error("song_title이 conf에서 제공되지 않았습니다.")
 
 # DAG 안에서 Task 연결
-song_title = 'Shape of You'  # Django를 airflow Variable로 받아오기
-song_title = song_title + " music"
 etl_task = PythonOperator(
     task_id='etl_task_playlist',
     python_callable=run_etl,
-    op_args=[song_title],
+    provide_context=True,  # dag_run을 context로 제공
     dag=dag,
 )
 
