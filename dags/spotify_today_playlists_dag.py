@@ -24,6 +24,37 @@ def extract_data_from_spotify():
     logger.info(f"spotify today playlist _ 데이터를 성공적으로 가져왔습니다: {today_playlists_data}")
     return today_playlists_data
 
+def transform_schema(cursor):
+    # daily_playlist
+    # 1. 테이블 삭제
+    drop_table_query = "DROP TABLE IF EXISTS django_schema.daily_playlists;"
+    cursor.execute(drop_table_query)
+
+    # 2. 테이블 생성
+    create_table_query = """
+    CREATE TABLE django_schema.daily_playlists (
+        no SERIAL PRIMARY KEY,
+        playlist_title VARCHAR(255) NOT NULL,
+        playlist_url VARCHAR(255) NOT NULL,
+        thumbnail VARCHAR(255),
+        platform VARCHAR(255) NOT NULL
+    );
+    """
+    cursor.execute(create_table_query)
+    
+    # 3. spotify_today_playlists 데이터 삽입
+    spotify_query = """
+    INSERT INTO django_schema.daily_playlists (playlist_title, playlist_url, thumbnail, platform)
+    SELECT 
+        title AS playlist_title,
+        link AS playlist_url,
+        cover_image AS thumbnail,
+        'spotify' AS platform
+    FROM playlist_schema.spotify_today_playlists;
+    """
+    cursor.execute(spotify_query)
+    return
+
 def load_data_to_db(today_playlists_data):
     """ 데이터베이스에 데이터 로드 """
     if not today_playlists_data:
@@ -68,6 +99,10 @@ def load_data_to_db(today_playlists_data):
             VALUES (%s, %s, %s)
             """
             cursor.execute(insert_query, (song['title'], song['link'], song['cover_image']))
+
+
+        #django_schema insert
+        transform_schema(cursor)
 
         conn.commit()
         logger.info("spotify today playlist _ 데이터가 성공적으로 데이터베이스에 삽입되었습니다.")

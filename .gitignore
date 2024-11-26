@@ -7,3 +7,6 @@ logs/scheduler/example_dags
 latest
 
 __pycache__
+
+airflow.cfg
+config

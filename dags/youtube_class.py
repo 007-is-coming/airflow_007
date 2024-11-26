@@ -57,7 +57,14 @@ class YoutubeClient:
         for idx, item in enumerate(data.get('items', []), 1):
             title = item['snippet']['title']
             playlist_id = item['id']['playlistId']
-            playlists.append({'no':idx, 'playlist_title': title, 'playlist_id': playlist_id})
+            thumbnails = item["snippet"].get("thumbnails", {})
+            thumbnail_url = thumbnails.get("medium", {}).get("url", "")  # 썸네일 URL 가져오기
+            playlists.append({
+                "no": idx,
+                "playlist_title": item["snippet"]["title"],
+                "playlist_id": playlist_id,
+                'playlist_thumbnail': thumbnail_url
+            })
 
         return pd.DataFrame(videos), pd.DataFrame(playlists)
 
@@ -116,10 +123,14 @@ class YoutubeClient:
             # 2. 플레이리스트 정보를 정리
             for idx, playlist in enumerate(playlists, 1):
                 playlist_id = playlist["id"].get("playlistId", "")
+                thumbnails = playlist["snippet"].get("thumbnails", {})
+                thumbnail_url = thumbnails.get("medium", {}).get("url", "")  # 썸네일 URL 가져오기
+
                 playlist_list.append({
                     "no": idx,
                     "playlist_title": playlist["snippet"]["title"],
-                    "playlist_id": playlist_id
+                    "playlist_id": playlist_id,
+                    'playlist_thumbnail': thumbnail_url
                 })
 
             return pd.DataFrame(video_list), pd.DataFrame(playlist_list)
