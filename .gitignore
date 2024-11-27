@@ -1,0 +1,13 @@
+# 로그 파일 제거
+logs
+logs/
+
+# config 파일 제거
+config
+config/
+
+# 캐시파일제거
+__pycache__
+
+# plugins 파일 제거
+plugins

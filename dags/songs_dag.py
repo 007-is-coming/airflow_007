@@ -27,12 +27,10 @@ def extract_data_from_site(song_title):
 
     """ Youtube에서 추천곡을 가져오는 함수 """
     youtube_client = YoutubeClient()
-    search_video_df, search_playlist_df = youtube_client.search_youtube(song_title + " music", youtube_recommendations_data)
-    logger.info(f"youtube 추천곡 _ 데이터를 성공적으로 가져왔습니다: {search_video_df}, {search_playlist_df}")
+    search_video_df = youtube_client.search_youtube(youtube_recommendations_data)
+    logger.info(f"youtube 추천곡 _ 데이터를 성공적으로 가져왔습니다: {search_video_df}")
     
-    
-
-    return search_video_df, recommendations_data, 
+    return search_video_df, recommendations_data
 
 def bulk_insert_table(cursor, conn, df, table_name):
     """

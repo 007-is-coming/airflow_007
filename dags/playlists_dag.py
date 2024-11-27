@@ -20,15 +20,16 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 def extract_data_from_site(song_title):
-    """ youtube에서 playlist를 가져오는 함수 """
-    youtube_client = YoutubeClient()
-    search_video_df, search_playlist_df = youtube_client.search_youtube(song_title + " music")
-    logger.info(f"youtube 검색 _ 데이터를 성공적으로 가져왔습니다: {search_video_df}, {search_playlist_df}")
     
     """spotify에서 playlist를 가지고 오는 함수"""
     spotify_client = SpotifyClient()
     playlist_data = spotify_client.find_playlists_by_song(song_title)
     logger.info(f"spotify playlist _ 데이터를 성공적으로 가져왔습니다: {playlist_data}")
+
+    """ youtube에서 playlist를 가져오는 함수 """
+    youtube_client = YoutubeClient()
+    search_playlist_df = youtube_client.search_youtube_playlist(song_title + " music")
+    logger.info(f"youtube 검색 _ 데이터를 성공적으로 가져왔습니다: {search_playlist_df}")
 
     return search_playlist_df, playlist_data
 
@@ -76,7 +77,7 @@ def transform_schema(cursor):
     SELECT 
         playlist_title AS playlist_title,
         playlist_id AS playlist_url,
-        CONCAT('https://img.youtube.com/vi/', playlist_id, '/0.jpg') AS thumbnail,
+        playlist_thumbnail AS thumbnail,
         'youtube' AS platform
     FROM playlist_schema.search_youtube_playlist;
     """
