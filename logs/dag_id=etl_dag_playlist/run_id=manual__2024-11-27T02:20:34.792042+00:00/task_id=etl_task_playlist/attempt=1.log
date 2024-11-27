@@ -1,0 +1,56 @@
+[2024-11-27T02:20:36.066+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-27T02:20:36.084+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag_playlist.etl_task_playlist manual__2024-11-27T02:20:34.792042+00:00 [queued]>
+[2024-11-27T02:20:36.090+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag_playlist.etl_task_playlist manual__2024-11-27T02:20:34.792042+00:00 [queued]>
+[2024-11-27T02:20:36.090+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-11-27T02:20:36.096+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): etl_task_playlist> on 2024-11-27 02:20:34.792042+00:00
+[2024-11-27T02:20:36.101+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1684) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-27T02:20:36.107+0000] {standard_task_runner.py:72} INFO - Started process 1686 to run task
+[2024-11-27T02:20:36.106+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag_playlist', 'etl_task_playlist', 'manual__2024-11-27T02:20:34.792042+00:00', '--job-id', '417', '--raw', '--subdir', 'DAGS_FOLDER/playlists_dag.py', '--cfg-path', '/tmp/tmpbzhdrdbf']
+[2024-11-27T02:20:36.110+0000] {standard_task_runner.py:105} INFO - Job 417: Subtask etl_task_playlist
+[2024-11-27T02:20:36.557+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag_playlist.etl_task_playlist manual__2024-11-27T02:20:34.792042+00:00 [running]> on host 5c426c48ab2b
+[2024-11-27T02:20:36.632+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag_playlist' AIRFLOW_CTX_TASK_ID='etl_task_playlist' AIRFLOW_CTX_EXECUTION_DATE='2024-11-27T02:20:34.792042+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-27T02:20:34.792042+00:00'
+[2024-11-27T02:20:36.632+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-27T02:20:37.949+0000] {playlists_dag.py:26} INFO - youtube 검색 _ 데이터를 성공적으로 가져왔습니다:    no                                        video_title     video_id
+0   1   SM (Shoemartl) Philippines Theme Song! (revised)  UL_weqiJpEg
+1   3            70 AWESOME SONGS FROM SM ENTERTAINMENT!  d16IfpjzZC4
+2   4  SMTOWN &#39;빛 (Hope)&#39; Official Video @SMTO...  VlM68GOkEUg
+3   6  We&#39;ve Got It All by Moira Dela Torre (Offi...  ZLSpGBhZheI
+4   8  சுழிபோட்டு(Suli poddu) New devotional song 202...  k2CA0FwjS7I
+5   9  SM Vibe Distant Smiles Distant Smiles #piano #...  _i1g7iQInzo
+6  10        SM Supermalls Song - Always Be Super Lyrics  7MT6-M9_1Jg
+7  11  SMTOWN &#39;빛 (Hope from KWANGYA)&#39; Officia...  PNuIOqhIlGU
+8  12    SM Theme Song 2022 with Vocals (Better Version)  PNnPswNqRO8
+9  20     our top 50 songs from sm entertainment artists  GFcu9oqPQjI,    no  ...                                playlist_thumbnail
+0   1  ...  https://i.ytimg.com/vi/REpZEEpjMlc/mqdefault.jpg
+1   2  ...  https://i.ytimg.com/vi/H69tJmsgd9I/mqdefault.jpg
+2   3  ...  https://i.ytimg.com/vi/uxmP4b2a0uY/mqdefault.jpg
+3   4  ...  https://i.ytimg.com/vi/db3rQDha-OQ/mqdefault.jpg
+4   5  ...  https://i.ytimg.com/vi/LvhQKz2KZh8/mqdefault.jpg
+5   6  ...  https://i.ytimg.com/vi/SnunPV-XTbA/mqdefault.jpg
+6   7  ...  https://i.ytimg.com/vi/oEUbQKLrS3U/mqdefault.jpg
+7   8  ...  https://i.ytimg.com/vi/B1qq8IvzSz4/mqdefault.jpg
+8   9  ...  https://i.ytimg.com/vi/UL_weqiJpEg/mqdefault.jpg
+9  10  ...  https://i.ytimg.com/vi/wvYerW9MaR4/mqdefault.jpg
+
+[10 rows x 4 columns]
+[2024-11-27T02:20:38.332+0000] {logging_mixin.py:190} INFO - Found track: Small girl (feat. D.O.) by Lee Young Ji
+[2024-11-27T02:20:38.799+0000] {playlists_dag.py:31} INFO - spotify playlist _ 데이터를 성공적으로 가져왔습니다: [{'title': 'Small girl (feat. D.O.) Radio', 'link': 'https://open.spotify.com/playlist/37i9dQZF1E8PDC0giyHOXM', 'cover_image': 'https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/track/1AtFSBJibfaqfiOByQCwZ5/en'}, {'title': 'Small girl (feat. D.O.)', 'link': 'https://open.spotify.com/playlist/31BmptuGekyBhqDO9NF5YS', 'cover_image': 'https://mosaic.scdn.co/640/ab67616d00001e02aa8e7da62fbfae5cb65f8e55ab67616d00001e02b688ba52ba0dda8bb66f0114ab67616d00001e02c453adba8c835f1b78ca68d3ab67616d00001e02fab24ab3579e817843e4a3db'}, {'title': 'Small girl (feat. 도경수(D.O.))', 'link': 'https://open.spotify.com/playlist/5I0ySCD9TxD7ry6oDQncs1', 'cover_image': 'https://mosaic.scdn.co/640/ab67616d00001e020ae4f4d42e4a09f3a29f64adab67616d00001e02510df6c4126aaec3e8cd22a4ab67616d00001e029164bafe9aaa168d93f4816aab67616d00001e02aa8e7da62fbfae5cb65f8e55'}, {'title': 'Small girl (feat. D.O.)', 'link': 'https://open.spotify.com/playlist/02Aypu29nae3dsjCsfp9f0', 'cover_image': 'https://i.scdn.co/image/ab67616d00001e02aa8e7da62fbfae5cb65f8e55'}, {'title': 'Small girl (feat. 도경수(D.O.))', 'link': 'https://open.spotify.com/playlist/03GkUfePCB6Wy2iHctuiwk', 'cover_image': 'https://mosaic.scdn.co/640/ab67616d00001e0232a2c1801d1bea991992265fab67616d00001e027e1eeb0d7cc374a168369c80ab67616d00001e02aa8e7da62fbfae5cb65f8e55ab67616d00001e02df61d37c88b01fa413c527c1'}, {'title': 'Small girl (feat. D.O.)', 'link': 'https://open.spotify.com/playlist/0worhR59YtVs5VCxer9P34', 'cover_image': 'https://i.scdn.co/image/ab67616d00001e02aa8e7da62fbfae5cb65f8e55'}, {'title': 'Small girl (feat. D.O.) - Lee Young Ji, D.O. - 이영지 - Small girl feat. 도경수', 'link': 'https://open.spotify.com/playlist/4wWoXBlpGMp4KvaBSytV3w', 'cover_image': 'https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c022b7bb192a516a4fea85ff3'}, {'title': 'Small girl (feat. D.O.)', 'link': 'https://open.spotify.com/playlist/27oArFgWG3JmhZPEDzE8p9', 'cover_image': 'https://mosaic.scdn.co/640/ab67616d00001e021895052324f123becdd0d53dab67616d00001e028513170cd3adda304ddfc1dcab67616d00001e02aa8e7da62fbfae5cb65f8e55ab67616d00001e02b657fbb27b17e7bd4691c2b2'}, {'title': 'Small girl (feat. 도경수(D.O.))', 'link': 'https://open.spotify.com/playlist/1fSB8ExMNbqKzLvndmfMmI', 'cover_image': 'https://mosaic.scdn.co/640/ab67616d00001e02468116c7e6137e0ecb9ec234ab67616d00001e02aa4c2149f4562a8d1f380f50ab67616d00001e02aa8e7da62fbfae5cb65f8e55ab67616d00001e02e87a41550ee1b24be3e6e1fb'}, {'title': 'Small girl (feat. D.O.)', 'link': 'https://open.spotify.com/playlist/1CU2wk4rdXnvCVW5vXZO0q', 'cover_image': 'https://mosaic.scdn.co/640/ab67616d00001e024ac5bae40a5293d4764abfc9ab67616d00001e027b7c31fa8f6fd3dd8dae2819ab67616d00001e027d061c041a338057ddbd2977ab67616d00001e02e7f2ddd96a9119666e7f7123'}]
+[2024-11-27T02:20:38.811+0000] {base.py:84} INFO - Retrieving connection 'playlist'
+[2024-11-27T02:20:38.964+0000] {playlists_dag.py:123} INFO - youtube 검색 _ search_youtube 기존 테이블 삭제 중...
+[2024-11-27T02:20:39.002+0000] {playlists_dag.py:127} INFO - spotify playlist _ 기존 테이블 삭제 중...
+[2024-11-27T02:20:39.018+0000] {playlists_dag.py:130} INFO - youtube 검색 _ search_youtube_playlist 새 테이블 생성 중...
+[2024-11-27T02:20:39.042+0000] {playlists_dag.py:140} INFO - youtube 검색 _ search_youtube_playlist 새 테이블 생성 완료
+[2024-11-27T02:20:39.043+0000] {playlists_dag.py:143} INFO - spotify playlist _ 새 테이블 생성 중...
+[2024-11-27T02:20:39.064+0000] {playlists_dag.py:152} INFO - spotify playlist _ 새 테이블 생성 완료
+[2024-11-27T02:20:39.100+0000] {playlists_dag.py:47} INFO - youtube 검색 _ 테이블 playlist_schema.search_youtube_playlist에 데이터 삽입 완료
+[2024-11-27T02:20:39.101+0000] {playlists_dag.py:156} INFO - youtube 검색 _ search_youtube_playlist 데이터가 성공적으로 데이터베이스에 삽입되었습니다.
+[2024-11-27T02:20:39.268+0000] {playlists_dag.py:165} INFO - spotify playlist _ 데이터가 성공적으로 데이터베이스에 삽입되었습니다.
+[2024-11-27T02:20:39.579+0000] {playlists_dag.py:181} INFO - playlist _ 데이터베이스 연결이 종료되었습니다.
+[2024-11-27T02:20:39.589+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-27T02:20:39.617+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-27T02:20:39.619+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag_playlist, task_id=etl_task_playlist, run_id=manual__2024-11-27T02:20:34.792042+00:00, execution_date=20241127T022034, start_date=20241127T022036, end_date=20241127T022039
+[2024-11-27T02:20:39.714+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-27T02:20:40.322+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-27T02:20:40.323+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

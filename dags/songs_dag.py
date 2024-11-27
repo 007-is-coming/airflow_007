@@ -20,17 +20,19 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 def extract_data_from_site(song_title):
-    """ Youtube에서 추천곡을 가져오는 함수 """
-    youtube_client = YoutubeClient()
-    search_video_df, search_playlist_df = youtube_client.search_youtube(song_title + " music")
-    logger.info(f"youtube 추천곡 _ 데이터를 성공적으로 가져왔습니다: {search_video_df}, {search_playlist_df}")
-    
     """ Spotify에서 추천곡을 가져오는 함수 """
     spotify_client = SpotifyClient()
-    recommendations_data = spotify_client.get_recommendations(song_title)
+    recommendations_data, youtube_recommendations_data = spotify_client.get_recommendations(song_title)
     logger.info(f"spotify 추천곡 _ 데이터를 성공적으로 가져왔습니다: {recommendations_data}")
 
-    return search_video_df, recommendations_data
+    """ Youtube에서 추천곡을 가져오는 함수 """
+    youtube_client = YoutubeClient()
+    search_video_df, search_playlist_df = youtube_client.search_youtube(song_title + " music", youtube_recommendations_data)
+    logger.info(f"youtube 추천곡 _ 데이터를 성공적으로 가져왔습니다: {search_video_df}, {search_playlist_df}")
+    
+    
+
+    return search_video_df, recommendations_data, 
 
 def bulk_insert_table(cursor, conn, df, table_name):
     """
