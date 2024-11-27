@@ -1,0 +1,56 @@
+[2024-11-27T00:39:18.239+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-27T00:39:18.248+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag_playlist.etl_task_playlist manual__2024-11-27T00:39:17.113505+00:00 [queued]>
+[2024-11-27T00:39:18.252+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag_playlist.etl_task_playlist manual__2024-11-27T00:39:17.113505+00:00 [queued]>
+[2024-11-27T00:39:18.252+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-11-27T00:39:18.259+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): etl_task_playlist> on 2024-11-27 00:39:17.113505+00:00
+[2024-11-27T00:39:18.263+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=310) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-27T00:39:18.265+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag_playlist', 'etl_task_playlist', 'manual__2024-11-27T00:39:17.113505+00:00', '--job-id', '401', '--raw', '--subdir', 'DAGS_FOLDER/playlists_dag.py', '--cfg-path', '/tmp/tmppvs7d0as']
+[2024-11-27T00:39:18.267+0000] {standard_task_runner.py:72} INFO - Started process 312 to run task
+[2024-11-27T00:39:18.267+0000] {standard_task_runner.py:105} INFO - Job 401: Subtask etl_task_playlist
+[2024-11-27T00:39:18.506+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag_playlist.etl_task_playlist manual__2024-11-27T00:39:17.113505+00:00 [running]> on host 5c426c48ab2b
+[2024-11-27T00:39:18.536+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag_playlist' AIRFLOW_CTX_TASK_ID='etl_task_playlist' AIRFLOW_CTX_EXECUTION_DATE='2024-11-27T00:39:17.113505+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-27T00:39:17.113505+00:00'
+[2024-11-27T00:39:18.537+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-27T00:39:19.789+0000] {playlists_dag.py:26} INFO - youtube 검색 _ 데이터를 성공적으로 가져왔습니다:    no                                        video_title     video_id
+0   1   Ed Sheeran - Shape of You (Official Music Video)  JGwWNGJdvx8
+1   2                 Ed Sheeran - Shape Of You (Lyrics)  Vds8ddYXYZY
+2   3   Ed Sheeran - Shape Of You [Official Lyric Video]  _dK2tDK9grQ
+3   4       Ed Sheeran - Shape Of You ( cover by J.Fla )  MhQKe-aERsU
+4   5                 Ed Sheeran - Shape Of You (Lyrics)  VwomfkFDvH4
+5   6  [AB STAGE] Ed Sheeran - Shape of you | @H2_day...  V438CXxIr1M
+6   7        Ed Sheeran - Shape Of You (Karaoke Version)  o71_MatpYV0
+7   8    Ed Sheeran - Shape of You (The Biggest Weekend)  Svtr-p4mrQ8
+8   9  Shape Of You X Naina - Mashup | Ed Sheeran &am...  l3QDy7zMZP4
+9  10                          Shape Of You Instrumental  bOETZNpWrZc,    no  ...                                playlist_thumbnail
+0   1  ...  https://i.ytimg.com/vi/JGwWNGJdvx8/mqdefault.jpg
+1   2  ...  https://i.ytimg.com/vi/12gmxhEFeBo/mqdefault.jpg
+2   3  ...  https://i.ytimg.com/vi/JGwWNGJdvx8/mqdefault.jpg
+3   4  ...  https://i.ytimg.com/vi/JGwWNGJdvx8/mqdefault.jpg
+4   5  ...  https://i.ytimg.com/vi/u6wOyMUs74I/mqdefault.jpg
+5   6  ...  https://i.ytimg.com/vi/th92jw2CFOA/mqdefault.jpg
+6   7  ...  https://i.ytimg.com/vi/JGwWNGJdvx8/mqdefault.jpg
+7   8  ...  https://i.ytimg.com/vi/JGwWNGJdvx8/mqdefault.jpg
+8   9  ...  https://i.ytimg.com/vi/OzTx9ttt4DA/mqdefault.jpg
+9  10  ...  https://i.ytimg.com/vi/JGwWNGJdvx8/mqdefault.jpg
+
+[10 rows x 4 columns]
+[2024-11-27T00:39:20.225+0000] {logging_mixin.py:190} INFO - Found track: Shape of You by Ed Sheeran
+[2024-11-27T00:39:20.885+0000] {playlists_dag.py:31} INFO - spotify playlist _ 데이터를 성공적으로 가져왔습니다: [{'title': 'Shape of you 1 hour', 'link': 'https://open.spotify.com/playlist/3i3EkH4o6dTmPJPYWNrfEd', 'cover_image': 'https://i.scdn.co/image/ab67616d00001e02ba5db46f4b838ef6027e6f96'}, {'title': 'Shape of You Radio', 'link': 'https://open.spotify.com/playlist/37i9dQZF1E8R1dl0mqoKFX', 'cover_image': 'https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/track/7qiZfU4dY1lWllzX7mPBI3/en'}, {'title': '들으면 극락가는 팝송', 'link': 'https://open.spotify.com/playlist/5Qc9z61Lk1gjip8i5VP2rf', 'cover_image': 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c07cd3ea170e8a6e701ca16a2'}, {'title': 'Ed Sheeran Best Hits', 'link': 'https://open.spotify.com/playlist/4hK25gScGegOxXTV6u5E21', 'cover_image': 'https://mosaic.scdn.co/640/ab67616d00001e0213b3e37318a0c247b550bccdab67616d00001e026567a393a964a845a89b7f70ab67616d00001e02a0aea3805ed6a87aa394c796ab67616d00001e02ba5db46f4b838ef6027e6f96'}, {'title': '디즈니 인기곡', 'link': 'https://open.spotify.com/playlist/37i9dQZF1DX5YQWTPjlYqc', 'cover_image': 'https://i.scdn.co/image/ab67706f00000002a28582aa5d15c55a46e21cbb'}, {'title': '누구나 한번쯤은 들어본 팝송 명곡 모음', 'link': 'https://open.spotify.com/playlist/7uHufrSCdmJVY7h1v022A2', 'cover_image': 'https://image-cdn-fa.spotifycdn.com/image/ab67706c0000d72c5dec83ba169e8dd91c46a941'}, {'title': 'Ed Sheeran Greatest Hits', 'link': 'https://open.spotify.com/playlist/622xKQ0FK6qAOD2TIJWhJN', 'cover_image': 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84585af528079e0d096932ba62'}, {'title': '쇼미더머니 10', 'link': 'https://open.spotify.com/playlist/25oeigTibLs7Wpk101NNpf', 'cover_image': 'https://mosaic.scdn.co/640/ab67616d00001e0223141b66a79432dd75c2b72cab67616d00001e024f558c990fd8ab33abf4091aab67616d00001e028156418aa91cb07f8b99cc7cab67616d00001e02ff44dc02d7ac33078fbbe1cf'}, {'title': 'Shape of You (Remixes)', 'link': 'https://open.spotify.com/playlist/56W7aEwe86FRSM2uigmvfY', 'cover_image': 'https://mosaic.scdn.co/640/ab67616d00001e023dd66389d087a6a4f93f6140ab67616d00001e02821c7d10ad64f3960576623cab67616d00001e02f346a2078fa56cd0fddad6c3c976bfc96d5e44820e553a16a6097cd02a61fd2f'}, {'title': '밤에 들으면 눈물나는 노래 ', 'link': 'https://open.spotify.com/playlist/5PQ6wSn5IUi2Md9IuXTIj1', 'cover_image': 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84ef3f1bf999854630f4b5e35a'}]
+[2024-11-27T00:39:20.892+0000] {base.py:84} INFO - Retrieving connection 'playlist'
+[2024-11-27T00:39:21.047+0000] {playlists_dag.py:123} INFO - youtube 검색 _ search_youtube 기존 테이블 삭제 중...
+[2024-11-27T00:39:21.081+0000] {playlists_dag.py:127} INFO - spotify playlist _ 기존 테이블 삭제 중...
+[2024-11-27T00:39:21.094+0000] {playlists_dag.py:130} INFO - youtube 검색 _ search_youtube_playlist 새 테이블 생성 중...
+[2024-11-27T00:39:21.118+0000] {playlists_dag.py:140} INFO - youtube 검색 _ search_youtube_playlist 새 테이블 생성 완료
+[2024-11-27T00:39:21.121+0000] {playlists_dag.py:143} INFO - spotify playlist _ 새 테이블 생성 중...
+[2024-11-27T00:39:21.140+0000] {playlists_dag.py:152} INFO - spotify playlist _ 새 테이블 생성 완료
+[2024-11-27T00:39:21.169+0000] {playlists_dag.py:47} INFO - youtube 검색 _ 테이블 playlist_schema.search_youtube_playlist에 데이터 삽입 완료
+[2024-11-27T00:39:21.169+0000] {playlists_dag.py:156} INFO - youtube 검색 _ search_youtube_playlist 데이터가 성공적으로 데이터베이스에 삽입되었습니다.
+[2024-11-27T00:39:21.456+0000] {playlists_dag.py:165} INFO - spotify playlist _ 데이터가 성공적으로 데이터베이스에 삽입되었습니다.
+[2024-11-27T00:39:21.547+0000] {playlists_dag.py:181} INFO - playlist _ 데이터베이스 연결이 종료되었습니다.
+[2024-11-27T00:39:21.548+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-27T00:39:21.553+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-27T00:39:21.553+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag_playlist, task_id=etl_task_playlist, run_id=manual__2024-11-27T00:39:17.113505+00:00, execution_date=20241127T003917, start_date=20241127T003918, end_date=20241127T003921
+[2024-11-27T00:39:21.587+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-27T00:39:21.851+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-27T00:39:21.853+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

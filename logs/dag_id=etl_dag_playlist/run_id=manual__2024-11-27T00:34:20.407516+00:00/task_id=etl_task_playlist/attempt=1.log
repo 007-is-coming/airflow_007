@@ -1,0 +1,56 @@
+[2024-11-27T00:34:21.581+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-27T00:34:21.589+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag_playlist.etl_task_playlist manual__2024-11-27T00:34:20.407516+00:00 [queued]>
+[2024-11-27T00:34:21.595+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag_playlist.etl_task_playlist manual__2024-11-27T00:34:20.407516+00:00 [queued]>
+[2024-11-27T00:34:21.597+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-11-27T00:34:21.603+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): etl_task_playlist> on 2024-11-27 00:34:20.407516+00:00
+[2024-11-27T00:34:21.608+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=232) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-27T00:34:21.609+0000] {standard_task_runner.py:72} INFO - Started process 234 to run task
+[2024-11-27T00:34:21.609+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag_playlist', 'etl_task_playlist', 'manual__2024-11-27T00:34:20.407516+00:00', '--job-id', '396', '--raw', '--subdir', 'DAGS_FOLDER/playlists_dag.py', '--cfg-path', '/tmp/tmpwk7unfdy']
+[2024-11-27T00:34:21.611+0000] {standard_task_runner.py:105} INFO - Job 396: Subtask etl_task_playlist
+[2024-11-27T00:34:21.960+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag_playlist.etl_task_playlist manual__2024-11-27T00:34:20.407516+00:00 [running]> on host 5c426c48ab2b
+[2024-11-27T00:34:21.993+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag_playlist' AIRFLOW_CTX_TASK_ID='etl_task_playlist' AIRFLOW_CTX_EXECUTION_DATE='2024-11-27T00:34:20.407516+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-27T00:34:20.407516+00:00'
+[2024-11-27T00:34:21.994+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-27T00:34:23.055+0000] {playlists_dag.py:26} INFO - youtube 검색 _ 데이터를 성공적으로 가져왔습니다:    no                                        video_title     video_id
+0   1                 [MV] N.Flying(엔플라잉) _ Rooftop(옥탑방)  VpaUh_BGqE0
+1   2  N.Flying (엔플라잉) - Rooftop (옥탑방) [Music Bank / ...  uDCMN0ow-jw
+2   3  N.Flying (엔플라잉) - Rooftop (옥탑방) Lyrics [Color ...  3jzBzplq_GI
+3   4  N.Flying (엔플라잉) - Rooftop (옥탑방) [Sketchbook / ...  9Q60hvjJwRo
+4   5  N.Flying(엔플라잉) - Rooftop(옥탑방) (Mu...  OhDtERP8M4g
+5   6  100초로 듣는 엔플라잉(N.Flying)ㅣ[100sec] 옥탑방, Star, Bl...  vFkmFYcNA2k
+6   7  옥탑방(Rooftop)  - N.Flying[뮤직뱅크 Music Bank] 2019...  BMmgR8Da7rM
+7   8  옥탑방 (Rooftop) - N.Flying [뮤직뱅크/Music Bank] | K...  LgrZSDho_oE
+8   9                       긴 외출 후 고양이가 저지른 일...ㅜㅜ ep_16  qUqCz55ZUT8
+9  10  뮤직뱅크 Music Bank - 옥탑방(Rooftop)  - N.Flying.201...  EFMQ77QkBqg,    no  ...                                playlist_thumbnail
+0   1  ...  https://i.ytimg.com/vi/J_mw4F1dLh4/mqdefault.jpg
+1   2  ...  https://i.ytimg.com/vi/mZfdf7rpEWE/mqdefault.jpg
+2   3  ...  https://i.ytimg.com/vi/3jzBzplq_GI/mqdefault.jpg
+3   4  ...  https://i.ytimg.com/vi/3jzBzplq_GI/mqdefault.jpg
+4   5  ...  https://i.ytimg.com/vi/yZMZ6Zfk_A4/mqdefault.jpg
+5   6  ...  https://i.ytimg.com/vi/49cyaEDTd5I/mqdefault.jpg
+6   7  ...  https://i.ytimg.com/vi/PNfFMvbAiz4/mqdefault.jpg
+7   8  ...  https://i.ytimg.com/vi/49cyaEDTd5I/mqdefault.jpg
+8   9  ...  https://i.ytimg.com/vi/VpaUh_BGqE0/mqdefault.jpg
+9  10  ...  https://i.ytimg.com/vi/pRmAQOOdHlI/mqdefault.jpg
+
+[10 rows x 4 columns]
+[2024-11-27T00:34:23.256+0000] {logging_mixin.py:190} INFO - Found track: Rooftop by N.Flying
+[2024-11-27T00:34:23.530+0000] {playlists_dag.py:31} INFO - spotify playlist _ 데이터를 성공적으로 가져왔습니다: [{'title': 'Rooftopbar Music 🌇', 'link': 'https://open.spotify.com/playlist/5WGk1ABtlL4uDXagmhwJgK', 'cover_image': 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84f08b2e95d4dadacfc429f9f0'}, {'title': '롤드컵 노래 2024~2014', 'link': 'https://open.spotify.com/playlist/2soNMrsk81jvEcKQTjwDpP', 'cover_image': 'https://mosaic.scdn.co/640/ab67616d00001e0204cd9a1664fb4539a55643feab67616d00001e0262b4ad8a3803bfb2f2d28f41ab67616d00001e0290db48f63a20fa434531c1a8ab67616d00001e02e4179b3fb74beaf0cdfa7a13'}, {'title': 'Vapo Do Vapo - TikTok Funk', 'link': 'https://open.spotify.com/playlist/71oXrfVc493zzj8j5nJBgM', 'cover_image': 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84d03acea12103526e7306c1d3'}, {'title': '[𝑃𝑙𝑎𝑦𝑙𝑖𝑠𝑡] 틀어놓으면 2시간이 훌쩍 지나가는 감성힙합 플레이리스트', 'link': 'https://open.spotify.com/playlist/5dA7QjoewsdGswor4CUV6X', 'cover_image': 'https://mosaic.scdn.co/640/ab67616d00001e022fe16d7a9e1b0f74b37ff6d1ab67616d00001e024f10712c9170e737a7c212ceab67616d00001e026001d285e54a08c95ade2f09ab67616d00001e02a5a26091ea3267c3a8e1967d'}, {'title': 'Cave rooftop', 'link': 'https://open.spotify.com/playlist/4znfaWL8Ioni60PlndM3VT', 'cover_image': 'https://mosaic.scdn.co/640/ab67616d00001e02437764375dc6953135721769ab67616d00001e02495835998e10da19d98a6ceeab67616d00001e02a432326560f055709491276dab67616d00001e02d1097a926d65591cd1cc8971'}, {'title': 'PLAVE Playlist : 연말 시상식 권장', 'link': 'https://open.spotify.com/playlist/5zYGY3brj9UzzjRFFrKphd', 'cover_image': 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da843fbc7038e3e4c04df2022409'}, {'title': 'school rooftop', 'link': 'https://open.spotify.com/playlist/3tnyrsSfTpP66ltp2moEJe', 'cover_image': 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da848a388fd582c38440cdc24bc7'}, {'title': '떼창 쌉가능한 ᴋ-ᴘᴏᴘ ᴘʟᴀʏʟɪꜱᴛ', 'link': 'https://open.spotify.com/playlist/5r6KJd8p72eTsExyHw8Lue', 'cover_image': 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8468734571fe9244c29c36a6e7'}, {'title': 'Rooftop Radio', 'link': 'https://open.spotify.com/playlist/37i9dQZF1E8CQfug9Z71tJ', 'cover_image': 'https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/track/2LwH6T39A5IODRgPv9XitR/en'}, {'title': '[때껄룩] Playlist 내가 사랑한 것들은 언젠간 날 울게 만든다 ', 'link': 'https://open.spotify.com/playlist/68VDAsDb3NKIZAkYrYqmew', 'cover_image': 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84babaca65055b972c0e365da0'}]
+[2024-11-27T00:34:23.542+0000] {base.py:84} INFO - Retrieving connection 'playlist'
+[2024-11-27T00:34:23.744+0000] {playlists_dag.py:123} INFO - youtube 검색 _ search_youtube 기존 테이블 삭제 중...
+[2024-11-27T00:34:23.781+0000] {playlists_dag.py:127} INFO - spotify playlist _ 기존 테이블 삭제 중...
+[2024-11-27T00:34:23.796+0000] {playlists_dag.py:130} INFO - youtube 검색 _ search_youtube_playlist 새 테이블 생성 중...
+[2024-11-27T00:34:23.826+0000] {playlists_dag.py:140} INFO - youtube 검색 _ search_youtube_playlist 새 테이블 생성 완료
+[2024-11-27T00:34:23.827+0000] {playlists_dag.py:143} INFO - spotify playlist _ 새 테이블 생성 중...
+[2024-11-27T00:34:23.851+0000] {playlists_dag.py:152} INFO - spotify playlist _ 새 테이블 생성 완료
+[2024-11-27T00:34:23.884+0000] {playlists_dag.py:47} INFO - youtube 검색 _ 테이블 playlist_schema.search_youtube_playlist에 데이터 삽입 완료
+[2024-11-27T00:34:23.885+0000] {playlists_dag.py:156} INFO - youtube 검색 _ search_youtube_playlist 데이터가 성공적으로 데이터베이스에 삽입되었습니다.
+[2024-11-27T00:34:24.044+0000] {playlists_dag.py:165} INFO - spotify playlist _ 데이터가 성공적으로 데이터베이스에 삽입되었습니다.
+[2024-11-27T00:34:24.144+0000] {playlists_dag.py:181} INFO - playlist _ 데이터베이스 연결이 종료되었습니다.
+[2024-11-27T00:34:24.145+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-27T00:34:24.154+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-27T00:34:24.155+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag_playlist, task_id=etl_task_playlist, run_id=manual__2024-11-27T00:34:20.407516+00:00, execution_date=20241127T003420, start_date=20241127T003421, end_date=20241127T003424
+[2024-11-27T00:34:24.177+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-27T00:34:24.329+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-27T00:34:24.330+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

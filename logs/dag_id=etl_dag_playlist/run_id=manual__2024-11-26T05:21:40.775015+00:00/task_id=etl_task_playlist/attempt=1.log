@@ -1,0 +1,60 @@
+[2024-11-26T05:21:41.787+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-26T05:21:41.799+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag_playlist.etl_task_playlist manual__2024-11-26T05:21:40.775015+00:00 [queued]>
+[2024-11-26T05:21:41.807+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag_playlist.etl_task_playlist manual__2024-11-26T05:21:40.775015+00:00 [queued]>
+[2024-11-26T05:21:41.808+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-11-26T05:21:41.817+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): etl_task_playlist> on 2024-11-26 05:21:40.775015+00:00
+[2024-11-26T05:21:41.821+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1099) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-26T05:21:41.825+0000] {standard_task_runner.py:72} INFO - Started process 1101 to run task
+[2024-11-26T05:21:41.824+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag_playlist', 'etl_task_playlist', 'manual__2024-11-26T05:21:40.775015+00:00', '--job-id', '381', '--raw', '--subdir', 'DAGS_FOLDER/playlists_dag.py', '--cfg-path', '/tmp/tmpsr3tctw8']
+[2024-11-26T05:21:41.826+0000] {standard_task_runner.py:105} INFO - Job 381: Subtask etl_task_playlist
+[2024-11-26T05:21:42.145+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag_playlist.etl_task_playlist manual__2024-11-26T05:21:40.775015+00:00 [running]> on host 5c426c48ab2b
+[2024-11-26T05:21:42.194+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag_playlist' AIRFLOW_CTX_TASK_ID='etl_task_playlist' AIRFLOW_CTX_EXECUTION_DATE='2024-11-26T05:21:40.775015+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-26T05:21:40.775015+00:00'
+[2024-11-26T05:21:42.195+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-26T05:21:43.352+0000] {playlists_dag.py:26} INFO - youtube 검색 _ 데이터를 성공적으로 가져왔습니다:    no                                        video_title     video_id
+0   1                 [MV] N.Flying(엔플라잉) _ Rooftop(옥탑방)  VpaUh_BGqE0
+1   2  N.Flying (엔플라잉) - Rooftop (옥탑방) [Music Bank / ...  uDCMN0ow-jw
+2   3  N.Flying (엔플라잉) - Rooftop (옥탑방) Lyrics [Color ...  3jzBzplq_GI
+3   4  N.Flying (엔플라잉) - Rooftop (옥탑방) [Sketchbook / ...  9Q60hvjJwRo
+4   5  N.Flying(엔플라잉) - Rooftop(옥탑방) (Mu...  OhDtERP8M4g
+5   6  100초로 듣는 엔플라잉(N.Flying)ㅣ[100sec] 옥탑방, Star, Bl...  vFkmFYcNA2k
+6   7  옥탑방(Rooftop)  - N.Flying[뮤직뱅크 Music Bank] 2019...  BMmgR8Da7rM
+7   8  N.Flying - Rooftop(옥탑방) [Music Bank / 2019.01.11]  01MQtbHNHas
+8   9                       긴 외출 후 고양이가 저지른 일...ㅜㅜ ep_16  qUqCz55ZUT8
+9  10  옥탑방 (Rooftop) - N.Flying [뮤직뱅크/Music Bank] | K...  LgrZSDho_oE,    no  ...                                playlist_thumbnail
+0   1  ...  https://i.ytimg.com/vi/J_mw4F1dLh4/mqdefault.jpg
+1   2  ...  https://i.ytimg.com/vi/mZfdf7rpEWE/mqdefault.jpg
+2   3  ...  https://i.ytimg.com/vi/3jzBzplq_GI/mqdefault.jpg
+3   4  ...  https://i.ytimg.com/vi/3jzBzplq_GI/mqdefault.jpg
+4   5  ...  https://i.ytimg.com/vi/49cyaEDTd5I/mqdefault.jpg
+5   6  ...  https://i.ytimg.com/vi/PNfFMvbAiz4/mqdefault.jpg
+6   7  ...  https://i.ytimg.com/vi/49cyaEDTd5I/mqdefault.jpg
+7   8  ...  https://i.ytimg.com/vi/VpaUh_BGqE0/mqdefault.jpg
+8   9  ...  https://i.ytimg.com/vi/pRmAQOOdHlI/mqdefault.jpg
+9  10  ...  https://i.ytimg.com/vi/49cyaEDTd5I/mqdefault.jpg
+
+[10 rows x 4 columns]
+[2024-11-26T05:21:43.573+0000] {logging_mixin.py:190} INFO - Found track: Rooftop by N.Flying
+[2024-11-26T05:21:43.767+0000] {playlists_dag.py:31} INFO - spotify playlist _ 데이터를 성공적으로 가져왔습니다: [{'title': 'Rooftopbar Music 🌇', 'link': 'https://open.spotify.com/playlist/5WGk1ABtlL4uDXagmhwJgK', 'cover_image': 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84f08b2e95d4dadacfc429f9f0'}, {'title': '[𝑃𝑙𝑎𝑦𝑙𝑖𝑠𝑡] 틀어놓으면 2시간이 훌쩍 지나가는 감성힙합 플레이리스트', 'link': 'https://open.spotify.com/playlist/5dA7QjoewsdGswor4CUV6X', 'cover_image': 'https://mosaic.scdn.co/640/ab67616d00001e022fe16d7a9e1b0f74b37ff6d1ab67616d00001e024f10712c9170e737a7c212ceab67616d00001e026001d285e54a08c95ade2f09ab67616d00001e02a5a26091ea3267c3a8e1967d'}, {'title': 'Vapo Do Vapo - TikTok Funk', 'link': 'https://open.spotify.com/playlist/71oXrfVc493zzj8j5nJBgM', 'cover_image': 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72cd03acea12103526e7306c1d3'}, {'title': '떼창 쌉가능한 ᴋ-ᴘᴏᴘ ᴘʟᴀʏʟɪꜱᴛ', 'link': 'https://open.spotify.com/playlist/5r6KJd8p72eTsExyHw8Lue', 'cover_image': 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8468734571fe9244c29c36a6e7'}, {'title': 'Cave rooftop', 'link': 'https://open.spotify.com/playlist/4znfaWL8Ioni60PlndM3VT', 'cover_image': 'https://mosaic.scdn.co/640/ab67616d00001e02437764375dc6953135721769ab67616d00001e02495835998e10da19d98a6ceeab67616d00001e02a432326560f055709491276dab67616d00001e02d1097a926d65591cd1cc8971'}]
+[2024-11-26T05:21:43.779+0000] {base.py:84} INFO - Retrieving connection 'playlist'
+[2024-11-26T05:21:43.937+0000] {playlists_dag.py:123} INFO - youtube 검색 _ search_youtube 기존 테이블 삭제 중...
+[2024-11-26T05:21:43.969+0000] {playlists_dag.py:127} INFO - spotify playlist _ 기존 테이블 삭제 중...
+[2024-11-26T05:21:43.993+0000] {playlists_dag.py:130} INFO - youtube 검색 _ search_youtube_playlist 새 테이블 생성 중...
+[2024-11-26T05:21:44.019+0000] {playlists_dag.py:140} INFO - youtube 검색 _ search_youtube_playlist 새 테이블 생성 완료
+[2024-11-26T05:21:44.019+0000] {playlists_dag.py:143} INFO - spotify playlist _ 새 테이블 생성 중...
+[2024-11-26T05:21:44.044+0000] {playlists_dag.py:152} INFO - spotify playlist _ 새 테이블 생성 완료
+[2024-11-26T05:21:44.082+0000] {playlists_dag.py:47} INFO - youtube 검색 _ 테이블 playlist_schema.search_youtube_playlist에 데이터 삽입 완료
+[2024-11-26T05:21:44.082+0000] {playlists_dag.py:156} INFO - youtube 검색 _ search_youtube_playlist 데이터가 성공적으로 데이터베이스에 삽입되었습니다.
+[2024-11-26T05:21:44.274+0000] {playlists_dag.py:165} INFO - spotify playlist _ 데이터가 성공적으로 데이터베이스에 삽입되었습니다.
+[2024-11-26T05:21:44.337+0000] {playlists_dag.py:174} ERROR - playlist _ 데이터 로드 중 오류 발생: 오류:  "django_schema.search_playlist" 이름의 릴레이션(relation)이 없습니다
+LINE 2:     INSERT INTO django_schema.search_playlist (playlist_titl...
+                        ^
+
+[2024-11-26T05:21:44.483+0000] {playlists_dag.py:181} INFO - playlist _ 데이터베이스 연결이 종료되었습니다.
+[2024-11-26T05:21:44.484+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-26T05:21:44.491+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-26T05:21:44.498+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag_playlist, task_id=etl_task_playlist, run_id=manual__2024-11-26T05:21:40.775015+00:00, execution_date=20241126T052140, start_date=20241126T052141, end_date=20241126T052144
+[2024-11-26T05:21:44.542+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-26T05:21:44.729+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-26T05:21:44.730+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

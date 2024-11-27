@@ -1,0 +1,55 @@
+[2024-11-26T02:12:18.567+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-26T02:12:18.574+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag_daily_tracks.etl_task_daily_tracks scheduled__2024-11-25T00:00:00+00:00 [queued]>
+[2024-11-26T02:12:18.577+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag_daily_tracks.etl_task_daily_tracks scheduled__2024-11-25T00:00:00+00:00 [queued]>
+[2024-11-26T02:12:18.577+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-11-26T02:12:18.581+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): etl_task_daily_tracks> on 2024-11-25 00:00:00+00:00
+[2024-11-26T02:12:18.585+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=393) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-26T02:12:18.585+0000] {standard_task_runner.py:72} INFO - Started process 394 to run task
+[2024-11-26T02:12:18.586+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag_daily_tracks', 'etl_task_daily_tracks', 'scheduled__2024-11-25T00:00:00+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/daily_songs_dag.py', '--cfg-path', '/tmp/tmps74lcuws']
+[2024-11-26T02:12:18.587+0000] {standard_task_runner.py:105} INFO - Job 28: Subtask etl_task_daily_tracks
+[2024-11-26T02:12:18.608+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag_daily_tracks.etl_task_daily_tracks scheduled__2024-11-25T00:00:00+00:00 [running]> on host e4b7d7f6e901
+[2024-11-26T02:12:18.779+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag_daily_tracks' AIRFLOW_CTX_TASK_ID='etl_task_daily_tracks' AIRFLOW_CTX_EXECUTION_DATE='2024-11-25T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-11-25T00:00:00+00:00'
+[2024-11-26T02:12:18.780+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-26T02:12:19.902+0000] {daily_songs_dag.py:29} INFO - youtube daily _ youtube 데일리 데이터를 성공적으로 가져왔습니다:    no                                        video_title     video_id
+0   1  Kendrick Lamar - wacced out murals (Official A...  YwUQ_5iV9pY
+1   2           Kendrick Lamar - luther (Official Audio)  HfWLgELllZs
+2   3                                        squabble up  U0KTVVMvcc4
+3   4  GloRilla - I LUV HER (feat. T-Pain) (Official ...  q44VdjcsjPg
+4   5                            Lil Baby - Insecurities  POCrFEZO82s
+5   6  ROSÉ & Bruno Mars - APT. (live from MAMA award...  Jn8KvdWagfo
+6   7     ROSÉ - number one girl (official music video)  pZ1NdE69VTs
+7   8  YTB Fatt - "FREE SMURK, BIG EDDIE & CAM" (Offi...  8ls44k4ub6U
+8   9             Gunna - HIM ALL ALONG [Official Video]  w7Wf0h1Q8a4
+9  10                    Lil Baby - 5AM (Official Video)  KhhN6m7Lfyw,    no  ...                                playlist_thumbnail
+0   1  ...  https://i.ytimg.com/vi/_BFdVAIB2qg/mqdefault.jpg
+1   2  ...  https://i.ytimg.com/vi/p7zFxzBj5F4/mqdefault.jpg
+2   3  ...  https://i.ytimg.com/vi/-DgEwQbQ55Q/mqdefault.jpg
+3   4  ...  https://i.ytimg.com/vi/9nqZ2F-ZAqY/mqdefault.jpg
+4   5  ...  https://i.ytimg.com/vi/6giH_4L0eDo/mqdefault.jpg
+5   6  ...  https://i.ytimg.com/vi/FzG4uDgje3M/mqdefault.jpg
+6   7  ...  https://i.ytimg.com/vi/wbsSY3YVHaU/mqdefault.jpg
+7   8  ...  https://i.ytimg.com/vi/mFnyrFwLyIQ/mqdefault.jpg
+8   9  ...  https://i.ytimg.com/vi/EI1VNeZYVTI/mqdefault.jpg
+9  10  ...  https://i.ytimg.com/vi/CNuRBo2StSo/mqdefault.jpg
+
+[10 rows x 4 columns]
+[2024-11-26T02:12:20.137+0000] {daily_songs_dag.py:34} INFO - spotify today track _ 데이터를 성공적으로 가져왔습니다: [{'title': 'APT.', 'link': 'https://open.spotify.com/track/5vNRhkKd0yEAg8suGBpjeY', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b273f8c8297efc6022534f1357e1'}, {'title': 'Die With A Smile', 'link': 'https://open.spotify.com/track/2plbrEY59IikOBgBGLjaoe', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b27382ea2e9e1858aa012c57cd45'}, {'title': 'luther (with sza)', 'link': 'https://open.spotify.com/track/2CGNAOSuO1MEFCbBRgUzjd', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b27309d6ed214f03fbb663e46531'}, {'title': 'squabble up', 'link': 'https://open.spotify.com/track/0nj9Bq5sHDiTxSHunhgkFb', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58'}, {'title': 'BIRDS OF A FEATHER', 'link': 'https://open.spotify.com/track/6dOtVTDdiauQNBQEDOtlAB', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b27371d62ea7ea8a5be92d3c1f62'}, {'title': 'tv off (feat. lefty gunplay)', 'link': 'https://open.spotify.com/track/0aB0v4027ukVziUGwVGYpG', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58'}, {'title': 'That’s So True', 'link': 'https://open.spotify.com/track/7ne4VBA60CxGM75vw0EYad', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b2731dac3694b3289cd903cb3acf'}, {'title': 'Who', 'link': 'https://open.spotify.com/track/7tI8dRuH2Yc6RuoTjxo4dU', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b273f02c451189a709b9a952aaec'}, {'title': 'wacced out murals', 'link': 'https://open.spotify.com/track/5gOfC9UzZQzTyShqPMrpjT', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58'}, {'title': 'All I Want for Christmas Is You', 'link': 'https://open.spotify.com/track/0bYg9bo50gSsH3LtXe2SQn', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b2734246e3158421f5abb75abc4f'}]
+[2024-11-26T02:12:20.152+0000] {base.py:84} INFO - Retrieving connection 'playlist'
+[2024-11-26T02:12:20.295+0000] {daily_songs_dag.py:126} INFO - youtube daily _ daily_youtube 기존 테이블 삭제 중...
+[2024-11-26T02:12:20.330+0000] {daily_songs_dag.py:130} INFO - spotify today track _ 기존 테이블 삭제 중...
+[2024-11-26T02:12:20.348+0000] {daily_songs_dag.py:134} INFO - youtube daily _ daily_youtube 새 테이블 생성 중...
+[2024-11-26T02:12:20.373+0000] {daily_songs_dag.py:142} INFO - youtube daily _ 새 테이블 생성 완료
+[2024-11-26T02:12:20.373+0000] {daily_songs_dag.py:145} INFO - spotify today track _ 새 테이블 생성 중...
+[2024-11-26T02:12:20.401+0000] {daily_songs_dag.py:155} INFO - spotify today track _ 새 테이블 생성 완료
+[2024-11-26T02:12:20.434+0000] {daily_songs_dag.py:50} INFO - youtube daily _ 테이블 playlist_schema.daily_youtube_video에 데이터 삽입 완료
+[2024-11-26T02:12:20.435+0000] {daily_songs_dag.py:159} INFO - youtube daily _ 데이터가 성공적으로 데이터베이스에 삽입되었습니다.
+[2024-11-26T02:12:20.578+0000] {daily_songs_dag.py:168} INFO - spotify today track _ 데이터가 성공적으로 데이터베이스에 삽입되었습니다.
+[2024-11-26T02:12:20.680+0000] {daily_songs_dag.py:182} INFO - daily songs _ 데이터베이스 연결이 종료되었습니다.
+[2024-11-26T02:12:20.682+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-26T02:12:20.700+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-26T02:12:20.700+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag_daily_tracks, task_id=etl_task_daily_tracks, run_id=scheduled__2024-11-25T00:00:00+00:00, execution_date=20241125T000000, start_date=20241126T021218, end_date=20241126T021220
+[2024-11-26T02:12:20.740+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-26T02:12:20.754+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-26T02:12:20.755+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

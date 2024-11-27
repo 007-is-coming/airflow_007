@@ -1,0 +1,56 @@
+[2024-11-27T02:26:14.703+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-27T02:26:14.712+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag_playlist.etl_task_playlist manual__2024-11-27T02:26:14.091048+00:00 [queued]>
+[2024-11-27T02:26:14.717+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag_playlist.etl_task_playlist manual__2024-11-27T02:26:14.091048+00:00 [queued]>
+[2024-11-27T02:26:14.717+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-11-27T02:26:14.725+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): etl_task_playlist> on 2024-11-27 02:26:14.091048+00:00
+[2024-11-27T02:26:14.730+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1769) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-27T02:26:14.732+0000] {standard_task_runner.py:72} INFO - Started process 1771 to run task
+[2024-11-27T02:26:14.732+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag_playlist', 'etl_task_playlist', 'manual__2024-11-27T02:26:14.091048+00:00', '--job-id', '420', '--raw', '--subdir', 'DAGS_FOLDER/playlists_dag.py', '--cfg-path', '/tmp/tmplgccegzs']
+[2024-11-27T02:26:14.735+0000] {standard_task_runner.py:105} INFO - Job 420: Subtask etl_task_playlist
+[2024-11-27T02:26:14.966+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag_playlist.etl_task_playlist manual__2024-11-27T02:26:14.091048+00:00 [running]> on host 5c426c48ab2b
+[2024-11-27T02:26:14.999+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag_playlist' AIRFLOW_CTX_TASK_ID='etl_task_playlist' AIRFLOW_CTX_EXECUTION_DATE='2024-11-27T02:26:14.091048+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-27T02:26:14.091048+00:00'
+[2024-11-27T02:26:15.000+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-27T02:26:16.232+0000] {playlists_dag.py:26} INFO - youtube 검색 _ 데이터를 성공적으로 가져왔습니다:    no                                        video_title     video_id
+0   1                   ᴘʟᴀʏʟɪꜱᴛ | 🌙여름 밤 듣기 좋은 엔플라잉 노래🍉🌊  U3dmV2OXE5k
+1   7     엔플라잉 (N.Flying) - Blue Moon(블루문) [가사 | Lyrics]  bm0w6TqHeJU
+2   8  N.Flying (엔플라잉) – Blue Moon [Han|Rom|Eng] Colo...  U91VXYDhFgg
+3  25  🔥 역주행에는 다 이유가 있는 법 🔥 : 엔플라잉 - Blue Moon (노래가사/...  SZvhmoQlSJc
+4  29  엔플라잉 - 아로하 [불후의 명곡2 전설을 노래하다/Immortal Songs 2]...  8NCIxBAvrkg
+5  32  N.Flying (엔플라잉) - &#39;Autumn Dream&#39; Lyric...  VLkV7JZndAY
+6  40  100초로 듣는 엔플라잉(N.Flying)ㅣ[100sec] 옥탑방, Star, Bl...  vFkmFYcNA2k
+7  45  엔플라잉 - 친구여  [불후의 명곡 전설을 노래하다 , Immortal Songs ...  FTMAWsHTkq0
+8  46  폭망 (I Like You) - 엔플라잉 (N.Flying) [뮤직뱅크/Music ...  JDoCQrWEWXE
+9  47  지친 당신의 마음을 위로해주는 N.Flying (엔플라잉) - FLOWER FANT...  EOk3556KXfg,    no  ...                                playlist_thumbnail
+0   1  ...  https://i.ytimg.com/vi/e6-TxMisjh8/mqdefault.jpg
+1   2  ...  https://i.ytimg.com/vi/_8SnRN0114k/mqdefault.jpg
+2   3  ...  https://i.ytimg.com/vi/49cyaEDTd5I/mqdefault.jpg
+3   4  ...  https://i.ytimg.com/vi/_u0rbNyosB8/mqdefault.jpg
+4   5  ...  https://i.ytimg.com/vi/prt4BHhKzmI/mqdefault.jpg
+5   6  ...  https://i.ytimg.com/vi/wS9CZC_grX8/mqdefault.jpg
+6   7  ...  https://i.ytimg.com/vi/z0etU3BEHdw/mqdefault.jpg
+7   8  ...  https://i.ytimg.com/vi/0rdcJHh9P24/mqdefault.jpg
+8   9  ...  https://i.ytimg.com/vi/mfyhYUWIkV4/mqdefault.jpg
+9  10  ...  https://i.ytimg.com/vi/ntIEctyJrsg/mqdefault.jpg
+
+[10 rows x 4 columns]
+[2024-11-27T02:26:16.419+0000] {logging_mixin.py:190} INFO - Found track: Firefly by N.Flying
+[2024-11-27T02:26:16.732+0000] {playlists_dag.py:31} INFO - spotify playlist _ 데이터를 성공적으로 가져왔습니다: [{'title': 'I`m Firefly Radio', 'link': 'https://open.spotify.com/playlist/37i9dQZF1E8MAGFFGUAg9H', 'cover_image': 'https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/track/27QLNrvWbFcwOYr8RpOpxg/en'}, {'title': '이걸 떼창 안한다고?', 'link': 'https://open.spotify.com/playlist/6xxiqg9hVrCL7rEZlEk90y', 'cover_image': 'https://mosaic.scdn.co/640/ab67616d00001e023dbdbd0023f1e1c08cd5a6c9ab67616d00001e026f2d10189a41c7345a5a0337ab67616d00001e02c89d6d3da4431db2eb42acb2ab67616d00001e02fd0d9a33127c1d3f58ba3504'}, {'title': 'Firefly Radio', 'link': 'https://open.spotify.com/playlist/37i9dQZF1E8MeYyL6Sacsk', 'cover_image': 'https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/track/0DQuWJSAblPRS30fCzEGmD/en'}, {'title': '진격의 거인 OST', 'link': 'https://open.spotify.com/playlist/1qmcYOXGCfKw5aCjemGtUf', 'cover_image': 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000d72c789fea087df82e175719c94c'}, {'title': 'Firefly', 'link': 'https://open.spotify.com/playlist/0UAw4JfX1TmstvHsjfYglW', 'cover_image': 'https://mosaic.scdn.co/640/ab67616d00001e021371b8ae53eaa841c12e815fab67616d00001e021bd29b839d8c0d42c202115dab67616d00001e025ef9ae9155c853282b3d3997ab67616d00001e02e7db91739d7843b4e866375b'}, {'title': '떼창 쌉가능한 ᴋ-ᴘᴏᴘ ᴘʟᴀʏʟɪꜱᴛ', 'link': 'https://open.spotify.com/playlist/5r6KJd8p72eTsExyHw8Lue', 'cover_image': 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8468734571fe9244c29c36a6e7'}, {'title': 'Firefly', 'link': 'https://open.spotify.com/playlist/5fTMFRbKJv5GxmleiOqNOV', 'cover_image': 'https://mosaic.scdn.co/640/ab67616d00001e021371b8ae53eaa841c12e815fab67616d00001e028350f1bdb9248e4c942750c9ab67616d00001e02baea20e4dc8e62c18c77870cab67616d00001e02f525767f02b23f31328093fb'}, {'title': '스테이지 파이터', 'link': 'https://open.spotify.com/playlist/6amadIjvEnC3x7PZ1jjEf3', 'cover_image': 'https://mosaic.scdn.co/640/ab67616d00001e0229a56405195366caf038f77fab67616d00001e0236e506c86ea543b9c5d16961ab67616d00001e025481c28abe25ba5144d2b389ab67616d00001e02dc93caa63f0b2af4b34aea46'}, {'title': 'I’m a firefly - 2022 Band Version Radio', 'link': 'https://open.spotify.com/playlist/37i9dQZF1E8OYIxXQ1IE2U', 'cover_image': 'https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/track/4VYq9NtzKGc0pnhnH75VL9/en'}, {'title': '챌린지 댄스 플리', 'link': 'https://open.spotify.com/playlist/27tQMpzQN80pjPbQcHIE4N', 'cover_image': 'https://mosaic.scdn.co/640/ab67616d00001e02253096eda3b7826c11c7fab8ab67616d00001e026dcfcf7e021ccc5791eb2a29ab67616d00001e0287b9df33d70b6711a4925d65ab67616d00001e028a3c501680aa4d9485333c11'}]
+[2024-11-27T02:26:16.739+0000] {base.py:84} INFO - Retrieving connection 'playlist'
+[2024-11-27T02:26:16.885+0000] {playlists_dag.py:123} INFO - youtube 검색 _ search_youtube 기존 테이블 삭제 중...
+[2024-11-27T02:26:16.919+0000] {playlists_dag.py:127} INFO - spotify playlist _ 기존 테이블 삭제 중...
+[2024-11-27T02:26:16.934+0000] {playlists_dag.py:130} INFO - youtube 검색 _ search_youtube_playlist 새 테이블 생성 중...
+[2024-11-27T02:26:16.958+0000] {playlists_dag.py:140} INFO - youtube 검색 _ search_youtube_playlist 새 테이블 생성 완료
+[2024-11-27T02:26:16.959+0000] {playlists_dag.py:143} INFO - spotify playlist _ 새 테이블 생성 중...
+[2024-11-27T02:26:16.982+0000] {playlists_dag.py:152} INFO - spotify playlist _ 새 테이블 생성 완료
+[2024-11-27T02:26:17.025+0000] {playlists_dag.py:47} INFO - youtube 검색 _ 테이블 playlist_schema.search_youtube_playlist에 데이터 삽입 완료
+[2024-11-27T02:26:17.026+0000] {playlists_dag.py:156} INFO - youtube 검색 _ search_youtube_playlist 데이터가 성공적으로 데이터베이스에 삽입되었습니다.
+[2024-11-27T02:26:17.171+0000] {playlists_dag.py:165} INFO - spotify playlist _ 데이터가 성공적으로 데이터베이스에 삽입되었습니다.
+[2024-11-27T02:26:17.265+0000] {playlists_dag.py:181} INFO - playlist _ 데이터베이스 연결이 종료되었습니다.
+[2024-11-27T02:26:17.266+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-27T02:26:17.281+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-27T02:26:17.282+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag_playlist, task_id=etl_task_playlist, run_id=manual__2024-11-27T02:26:14.091048+00:00, execution_date=20241127T022614, start_date=20241127T022614, end_date=20241127T022617
+[2024-11-27T02:26:17.312+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-27T02:26:17.480+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-27T02:26:17.481+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

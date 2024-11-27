@@ -14,30 +14,36 @@ class YoutubeClient:
         self.SEARCH_URL = Variable.get("SEARCH_URL")
         self.BASE_URL = Variable.get("BASE_URL")
 
-    def search_youtube(self, song_title, max_results=10):
+    def search_youtube(self, song_title, youtube_recommendations_data, max_results=10):
         """
         특정 노래 제목으로 동영상과 플레이리스트를 
         10개씩 검색하여 DataFrame으로 반환하는 함수.
         """
-        params = {
-            'key': self.API_KEY,
-            'q': song_title,
-            'type': 'video',
-            'part': 'snippet',
-            'maxResults': max_results
-        }
-        response = requests.get(self.SEARCH_URL, params=params)
-
-        if response.status_code != 200:
-            print(f"Error: {response.status_code}, {response.text}")
-            return pd.DataFrame()  # 빈 DataFrame 반환
-
-        data = response.json()
+        #spotify 노래 받아오기
         videos = []
-        for idx, item in enumerate(data.get('items', []), 1):
-            title = item['snippet']['title']
-            video_id = item['id']['videoId']
-            videos.append({'no':idx, 'video_title': title, 'video_id': video_id})
+        for search_keyword in youtube_recommendations_data:
+            #spotify 노래 기준 search
+            params = {
+                'key': self.API_KEY,
+                'q': search_keyword,
+                'type': 'video',
+                'part': 'snippet',
+                'maxResults': 1
+            }
+            response = requests.get(self.SEARCH_URL, params=params)
+
+
+
+            if response.status_code != 200:
+                print(f"Error: {response.status_code}, {response.text}")
+                return pd.DataFrame()  # 빈 DataFrame 반환
+            
+            data = response.json()
+            
+            title = data.get('items')[0]['snippet']['title']
+            video_id = data.get('items')[0]['id']['videoId']
+            idx = len(videos) + 1
+            videos.append({'no': idx, 'video_title': title, 'video_id': video_id})
 
         params = {
             'key': self.API_KEY,

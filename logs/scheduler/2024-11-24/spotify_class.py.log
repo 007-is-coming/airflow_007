@@ -1,0 +1,40 @@
+[2024-11-24T13:36:23.778+0000] {processor.py:153} INFO - Started process (PID=65) to work on /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:36:23.779+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/spotify_class.py for tasks to queue
+[2024-11-24T13:36:23.779+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:36:23.779+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:36:23.799+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:36:23.805+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/spotify_class.py took 0.028 seconds
+[2024-11-24T13:36:54.229+0000] {processor.py:153} INFO - Started process (PID=76) to work on /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:36:54.229+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/spotify_class.py for tasks to queue
+[2024-11-24T13:36:54.229+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:36:54.229+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:36:54.242+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:36:54.247+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/spotify_class.py took 0.020 seconds
+[2024-11-24T13:37:24.609+0000] {processor.py:153} INFO - Started process (PID=87) to work on /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:37:24.609+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/spotify_class.py for tasks to queue
+[2024-11-24T13:37:24.609+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:37:24.609+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:37:24.622+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:37:24.627+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/spotify_class.py took 0.020 seconds
+[2024-11-24T13:37:55.017+0000] {processor.py:153} INFO - Started process (PID=104) to work on /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:37:55.017+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/spotify_class.py for tasks to queue
+[2024-11-24T13:37:55.018+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:37:55.017+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:37:55.031+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:37:55.037+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/spotify_class.py took 0.021 seconds
+[2024-11-24T13:38:25.426+0000] {processor.py:153} INFO - Started process (PID=118) to work on /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:38:25.427+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/spotify_class.py for tasks to queue
+[2024-11-24T13:38:25.427+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:38:25.427+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:38:25.442+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:38:25.449+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/spotify_class.py took 0.024 seconds
+[2024-11-24T13:38:55.770+0000] {processor.py:153} INFO - Started process (PID=129) to work on /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:38:55.770+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/spotify_class.py for tasks to queue
+[2024-11-24T13:38:55.771+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:38:55.771+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:38:55.784+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:38:55.791+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/spotify_class.py took 0.022 seconds
+[2024-11-24T13:39:26.133+0000] {processor.py:153} INFO - Started process (PID=140) to work on /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:39:26.133+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/spotify_class.py for tasks to queue
+[2024-11-24T13:39:26.134+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:39:26.134+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:39:26.151+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:39:26.157+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/spotify_class.py took 0.025 seconds
+[2024-11-24T13:39:56.519+0000] {processor.py:153} INFO - Started process (PID=168) to work on /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:39:56.520+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/spotify_class.py for tasks to queue
+[2024-11-24T13:39:56.520+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:39:56.520+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:39:56.533+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/spotify_class.py
+[2024-11-24T13:39:56.538+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/spotify_class.py took 0.020 seconds

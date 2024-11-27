@@ -1,0 +1,59 @@
+[2024-11-26T05:21:17.368+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-26T05:21:17.378+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag_search_songs.etl_task_tracks manual__2024-11-26T05:21:15.957262+00:00 [queued]>
+[2024-11-26T05:21:17.382+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag_search_songs.etl_task_tracks manual__2024-11-26T05:21:15.957262+00:00 [queued]>
+[2024-11-26T05:21:17.382+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-11-26T05:21:17.390+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): etl_task_tracks> on 2024-11-26 05:21:15.957262+00:00
+[2024-11-26T05:21:17.394+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1094) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-26T05:21:17.394+0000] {standard_task_runner.py:72} INFO - Started process 1097 to run task
+[2024-11-26T05:21:17.395+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag_search_songs', 'etl_task_tracks', 'manual__2024-11-26T05:21:15.957262+00:00', '--job-id', '380', '--raw', '--subdir', 'DAGS_FOLDER/songs_dag.py', '--cfg-path', '/tmp/tmpitfavutd']
+[2024-11-26T05:21:17.396+0000] {standard_task_runner.py:105} INFO - Job 380: Subtask etl_task_tracks
+[2024-11-26T05:21:17.416+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag_search_songs.etl_task_tracks manual__2024-11-26T05:21:15.957262+00:00 [running]> on host 5c426c48ab2b
+[2024-11-26T05:21:17.606+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag_search_songs' AIRFLOW_CTX_TASK_ID='etl_task_tracks' AIRFLOW_CTX_EXECUTION_DATE='2024-11-26T05:21:15.957262+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-26T05:21:15.957262+00:00'
+[2024-11-26T05:21:17.607+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-26T05:21:18.839+0000] {songs_dag.py:26} INFO - youtube 추천곡 _ 데이터를 성공적으로 가져왔습니다:    no                                        video_title     video_id
+0   1                 [MV] N.Flying(엔플라잉) _ Rooftop(옥탑방)  VpaUh_BGqE0
+1   2  N.Flying (엔플라잉) - Rooftop (옥탑방) [Music Bank / ...  uDCMN0ow-jw
+2   3  N.Flying (엔플라잉) - Rooftop (옥탑방) [Sketchbook / ...  9Q60hvjJwRo
+3   4  N.Flying (엔플라잉) - Rooftop (옥탑방) Lyrics [Color ...  3jzBzplq_GI
+4   5  N.Flying(엔플라잉) - Rooftop(옥탑방) (Mu...  OhDtERP8M4g
+5   6  100초로 듣는 엔플라잉(N.Flying)ㅣ[100sec] 옥탑방, Star, Bl...  vFkmFYcNA2k
+6   7  옥탑방(Rooftop)  - N.Flying[뮤직뱅크 Music Bank] 2019...  BMmgR8Da7rM
+7   8  옥탑방 (Rooftop) - N.Flying [뮤직뱅크/Music Bank] | K...  LgrZSDho_oE
+8   9                       긴 외출 후 고양이가 저지른 일...ㅜㅜ ep_16  qUqCz55ZUT8
+9  10  N.Flying - Rooftop(옥탑방) [Music Bank / 2019.01.11]  01MQtbHNHas,    no  ...                                playlist_thumbnail
+0   1  ...  https://i.ytimg.com/vi/J_mw4F1dLh4/mqdefault.jpg
+1   2  ...  https://i.ytimg.com/vi/mZfdf7rpEWE/mqdefault.jpg
+2   3  ...  https://i.ytimg.com/vi/3jzBzplq_GI/mqdefault.jpg
+3   4  ...  https://i.ytimg.com/vi/3jzBzplq_GI/mqdefault.jpg
+4   5  ...  https://i.ytimg.com/vi/49cyaEDTd5I/mqdefault.jpg
+5   6  ...  https://i.ytimg.com/vi/PNfFMvbAiz4/mqdefault.jpg
+6   7  ...  https://i.ytimg.com/vi/49cyaEDTd5I/mqdefault.jpg
+7   8  ...  https://i.ytimg.com/vi/VpaUh_BGqE0/mqdefault.jpg
+8   9  ...  https://i.ytimg.com/vi/pRmAQOOdHlI/mqdefault.jpg
+9  10  ...  https://i.ytimg.com/vi/49cyaEDTd5I/mqdefault.jpg
+
+[10 rows x 4 columns]
+[2024-11-26T05:21:19.038+0000] {logging_mixin.py:190} INFO - Found track: Rooftop by N.Flying
+[2024-11-26T05:21:19.332+0000] {songs_dag.py:31} INFO - spotify 추천곡 _ 데이터를 성공적으로 가져왔습니다: [{'title': 'Misfit', 'link': 'https://open.spotify.com/track/73ZUfHx4Z3JyoWGA2s1rD0', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b273be182842265a125a49bddd67'}, {'title': "I'm Gonna Love You", 'link': 'https://open.spotify.com/track/1jxGBe4s8FwL2ZeNWszVuu', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b27305203cde35ba2fef6ca7b970'}, {'title': '광화문에서 (At Gwanghwamun)', 'link': 'https://open.spotify.com/track/1YqGY2dW0a9ocyxaB5PtrR', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b2730b98d60abedd35fe48d05263'}, {'title': '쏘리 쏘리 Sorry, Sorry', 'link': 'https://open.spotify.com/track/5w18nowVMRZrC5Na9Vxoth', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b273fb6e8a26c2c4d9a23f888a94'}, {'title': 'Goodbye Summer (f(Amber+Luna+Krystal))', 'link': 'https://open.spotify.com/track/1UpLArL9Db4IAK5DjKZYP8', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b2736f7d8c9dcc983839bd746dbc'}, {'title': 'What The Spring??', 'link': 'https://open.spotify.com/track/1fr9b1MIyas7cpt1QY3h9d', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b27335c5a4a54a7893ff38289e73'}, {'title': 'A.D.T.O.Y.', 'link': 'https://open.spotify.com/track/08Ec2vCnWGAgMaIdBMQ3N7', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b273b8780ca4a862162b59721968'}, {'title': 'WHO YOU?', 'link': 'https://open.spotify.com/track/7iT56ss42YdtYnNQEnxp9Z', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b2733dbdbd0023f1e1c08cd5a6c9'}, {'title': 'Loner', 'link': 'https://open.spotify.com/track/7wqBDFp7JZfWp3aPaC4gHQ', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b273e3da01536c3b5343fc169fec'}, {'title': 'Light', 'link': 'https://open.spotify.com/track/7mpg5bCxWSTwTDLOU2KPeh', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b27391b1a2669091c37333ec9c56'}]
+[2024-11-26T05:21:19.351+0000] {base.py:84} INFO - Retrieving connection 'playlist'
+[2024-11-26T05:21:19.508+0000] {songs_dag.py:129} INFO - youtube 검색 _ search_youtube_video 기존 테이블 삭제 중...
+[2024-11-26T05:21:19.562+0000] {songs_dag.py:134} INFO - spotify 추천곡 _ 기존 테이블 삭제 중...
+[2024-11-26T05:21:19.580+0000] {songs_dag.py:137} INFO - youtube 검색 _ search_youtube_video 새 테이블 생성 중...
+[2024-11-26T05:21:19.607+0000] {songs_dag.py:147} INFO - youtube 검색 _ search_youtube_video 새 테이블 생성 완료
+[2024-11-26T05:21:19.608+0000] {songs_dag.py:151} INFO - spotify 추천곡 _ 새 테이블 생성 중...
+[2024-11-26T05:21:19.629+0000] {songs_dag.py:161} INFO - spotify 추천곡 _ 새 테이블 생성 완료
+[2024-11-26T05:21:19.666+0000] {songs_dag.py:47} INFO - youtube 검색 _ 테이블 playlist_schema.search_youtube_video에 데이터 삽입 완료
+[2024-11-26T05:21:19.667+0000] {songs_dag.py:165} INFO - youtube 검색 _ search_youtube 데이터가 성공적으로 데이터베이스에 삽입되었습니다.
+[2024-11-26T05:21:19.828+0000] {songs_dag.py:174} INFO - spotify 추천곡 _ 데이터가 성공적으로 데이터베이스에 삽입되었습니다.
+[2024-11-26T05:21:19.829+0000] {songs_dag.py:58} INFO -  search songs : 데이터를 삭제합니다.
+[2024-11-26T05:21:19.870+0000] {songs_dag.py:73} INFO -  search_songs _ 새 테이블 생성 완료
+[2024-11-26T05:21:19.901+0000] {songs_dag.py:99} INFO -  search songs : 데이터가 삽입 되었습니다.
+[2024-11-26T05:21:19.917+0000] {songs_dag.py:190} INFO - 추천곡 _ 데이터베이스 연결이 종료되었습니다.
+[2024-11-26T05:21:19.917+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-26T05:21:19.922+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-26T05:21:19.922+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag_search_songs, task_id=etl_task_tracks, run_id=manual__2024-11-26T05:21:15.957262+00:00, execution_date=20241126T052115, start_date=20241126T052117, end_date=20241126T052119
+[2024-11-26T05:21:19.974+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-26T05:21:19.986+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-26T05:21:19.987+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

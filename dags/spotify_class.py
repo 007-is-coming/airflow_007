@@ -37,9 +37,10 @@ class SpotifyClient:
         print(f"Found track: {track['name']} by {track['artists'][0]['name']}")
 
         # 추천 곡 받기
-        recommendations = self.sp.recommendations(seed_tracks=[track['id']], limit=10)
+        recommendations = self.sp.recommendations(seed_tracks=[track['id']], limit=20)
         
         recommendations_data = []
+        youtube_recommendations_data = []
         for rec in recommendations['tracks']:
             album_cover_url = rec['album']['images'][0]['url']
             song_info = {
@@ -47,9 +48,12 @@ class SpotifyClient:
                 "link": rec['external_urls']['spotify'],
                 "cover_image": album_cover_url
             }
-            recommendations_data.append(song_info)
+            if len(recommendations_data) < 10:
+                recommendations_data.append(song_info)
+            else:
+                youtube_recommendations_data.append(rec['name'])
 
-        return recommendations_data
+        return recommendations_data, youtube_recommendations_data
 
     def find_playlists_by_song(self, song_title):
         """ 노래 제목을 입력받아 해당 노래가 포함된 플레이리스트를 찾는 함수 """

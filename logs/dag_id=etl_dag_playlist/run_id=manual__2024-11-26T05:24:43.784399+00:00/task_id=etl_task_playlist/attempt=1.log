@@ -1,0 +1,56 @@
+[2024-11-26T05:24:45.184+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-26T05:24:45.193+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag_playlist.etl_task_playlist manual__2024-11-26T05:24:43.784399+00:00 [queued]>
+[2024-11-26T05:24:45.199+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag_playlist.etl_task_playlist manual__2024-11-26T05:24:43.784399+00:00 [queued]>
+[2024-11-26T05:24:45.200+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-11-26T05:24:45.205+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): etl_task_playlist> on 2024-11-26 05:24:43.784399+00:00
+[2024-11-26T05:24:45.209+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1154) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-26T05:24:45.210+0000] {standard_task_runner.py:72} INFO - Started process 1155 to run task
+[2024-11-26T05:24:45.210+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag_playlist', 'etl_task_playlist', 'manual__2024-11-26T05:24:43.784399+00:00', '--job-id', '385', '--raw', '--subdir', 'DAGS_FOLDER/playlists_dag.py', '--cfg-path', '/tmp/tmp261esga7']
+[2024-11-26T05:24:45.212+0000] {standard_task_runner.py:105} INFO - Job 385: Subtask etl_task_playlist
+[2024-11-26T05:24:45.410+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag_playlist.etl_task_playlist manual__2024-11-26T05:24:43.784399+00:00 [running]> on host 5c426c48ab2b
+[2024-11-26T05:24:45.445+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag_playlist' AIRFLOW_CTX_TASK_ID='etl_task_playlist' AIRFLOW_CTX_EXECUTION_DATE='2024-11-26T05:24:43.784399+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-26T05:24:43.784399+00:00'
+[2024-11-26T05:24:45.446+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-26T05:24:46.918+0000] {playlists_dag.py:26} INFO - youtube 검색 _ 데이터를 성공적으로 가져왔습니다:    no                                        video_title     video_id
+0   1  [Playlist] 슬슬 연말 분위기를 내볼까요? | 퍼펙트 크리스마스 캐롤 플레이...  a_80o2lDYec
+1   2  Unwinding with Christmas Jazz Music 2025 🎄 Rel...  _uxpYOHxRK0
+2   3  [𝐏𝐥𝐚𝐲𝐥𝐈𝐬𝐭] 🎅 솔직히 나만 지금부터 캐롤 듣는 거 아니지? 🎄 | 크리스마...  cGNnccgCSOs
+3   4  크리스마스 Playlist | 신나는 인싸노래만 모아온 BEST 인기곡 캐롤 Mer...  y2hV2PXka_M
+4   5           𝗣𝗹𝗮𝘆𝗹𝗶𝘀𝘁. 지나가던 산타도 듣고 간다는 크리스마스 캐롤 모음 🎅🎄  qvIP0CW_1yQ
+5   6  𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭🎄 크리스마스가 다가온다. 그것도 아주 행복할❤  캐롤 플레이리스트🎁...  TX-yJ3yyMyg
+6   7  Relaxing Christmas Jazz Music Ambience 🎄 Instr...  y9B6Vqch0uM
+7   8  Top Christmas Songs of All Time 🎅🏼 Best Christ...  fSVbO7sM8D8
+8   9  The Ananda Joy Singers &#39;The CHRISTMAS MYST...  ySstFmIeh3o
+9  10  Warm Christmas Ambience with Jazz Relaxing Mus...  8NL4a1qPY74,    no  ...                                playlist_thumbnail
+0   1  ...  https://i.ytimg.com/vi/Mur4L2B2lwE/mqdefault.jpg
+1   2  ...  https://i.ytimg.com/vi/a_80o2lDYec/mqdefault.jpg
+2   3  ...  https://i.ytimg.com/vi/yXQViqx6GMY/mqdefault.jpg
+3   4  ...  https://i.ytimg.com/vi/E8gmARGvPlI/mqdefault.jpg
+4   5  ...  https://i.ytimg.com/vi/sEITCgcWSlU/mqdefault.jpg
+5   6  ...  https://i.ytimg.com/vi/O1x-hOOrl5E/mqdefault.jpg
+6   7  ...  https://i.ytimg.com/vi/yXQViqx6GMY/mqdefault.jpg
+7   8  ...  https://i.ytimg.com/vi/yXQViqx6GMY/mqdefault.jpg
+8   9  ...  https://i.ytimg.com/vi/vL8IvJJbxjU/mqdefault.jpg
+9  10  ...  https://i.ytimg.com/vi/aAkMkVFwAoo/mqdefault.jpg
+
+[10 rows x 4 columns]
+[2024-11-26T05:24:47.155+0000] {logging_mixin.py:190} INFO - Found track: Because It's Christmas by Sung Si Kyung
+[2024-11-26T05:24:47.628+0000] {playlists_dag.py:31} INFO - spotify playlist _ 데이터를 성공적으로 가져왔습니다: [{'title': "Because It's Christmas Radio", 'link': 'https://open.spotify.com/playlist/37i9dQZF1E8PhoMFPMEbkq', 'cover_image': 'https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/track/1oWe4At8PLglBRAeQVcglM/en'}, {'title': '크리스마스 캐롤 Christmas carol🎄❤️ ', 'link': 'https://open.spotify.com/playlist/11OrgzGIrGOsTgKqwhWZQB', 'cover_image': 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da849004f159f77a93d00677d861'}, {'title': 'Because It\'s Christmas (For All the Children) - Excerpt from Händel\'s Messiah ("For Unto Us A Child Is Born...") Radio', 'link': 'https://open.spotify.com/playlist/37i9dQZF1E8Rz81fbSPEZi', 'cover_image': 'https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/track/5RNmRDQCNGFzUEujw7s3ut/en'}, {'title': '듣기만 해도 설레는 크리스마스 캐롤 🎅', 'link': 'https://open.spotify.com/playlist/0Tt6OfMWuK8rtCvUcf7Ddy', 'cover_image': 'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8465b23ba1be3bd1a121ed154d'}, {'title': "Because It's Christmas Radio", 'link': 'https://open.spotify.com/playlist/37i9dQZF1E8KCHWQA5XO6V', 'cover_image': 'https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/track/10ntPKubD1iqqZ8KIxqPGg/en'}]
+[2024-11-26T05:24:47.742+0000] {base.py:84} INFO - Retrieving connection 'playlist'
+[2024-11-26T05:24:47.885+0000] {playlists_dag.py:123} INFO - youtube 검색 _ search_youtube 기존 테이블 삭제 중...
+[2024-11-26T05:24:47.913+0000] {playlists_dag.py:127} INFO - spotify playlist _ 기존 테이블 삭제 중...
+[2024-11-26T05:24:47.932+0000] {playlists_dag.py:130} INFO - youtube 검색 _ search_youtube_playlist 새 테이블 생성 중...
+[2024-11-26T05:24:47.957+0000] {playlists_dag.py:140} INFO - youtube 검색 _ search_youtube_playlist 새 테이블 생성 완료
+[2024-11-26T05:24:47.957+0000] {playlists_dag.py:143} INFO - spotify playlist _ 새 테이블 생성 중...
+[2024-11-26T05:24:47.978+0000] {playlists_dag.py:152} INFO - spotify playlist _ 새 테이블 생성 완료
+[2024-11-26T05:24:48.016+0000] {playlists_dag.py:47} INFO - youtube 검색 _ 테이블 playlist_schema.search_youtube_playlist에 데이터 삽입 완료
+[2024-11-26T05:24:48.016+0000] {playlists_dag.py:156} INFO - youtube 검색 _ search_youtube_playlist 데이터가 성공적으로 데이터베이스에 삽입되었습니다.
+[2024-11-26T05:24:48.227+0000] {playlists_dag.py:165} INFO - spotify playlist _ 데이터가 성공적으로 데이터베이스에 삽입되었습니다.
+[2024-11-26T05:24:48.324+0000] {playlists_dag.py:181} INFO - playlist _ 데이터베이스 연결이 종료되었습니다.
+[2024-11-26T05:24:48.325+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-26T05:24:48.333+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-26T05:24:48.334+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag_playlist, task_id=etl_task_playlist, run_id=manual__2024-11-26T05:24:43.784399+00:00, execution_date=20241126T052443, start_date=20241126T052445, end_date=20241126T052448
+[2024-11-26T05:24:48.362+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-26T05:24:48.635+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-26T05:24:48.636+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
