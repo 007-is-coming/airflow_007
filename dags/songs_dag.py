@@ -20,7 +20,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 def extract_data_from_site(song_title):
-    """ Spotify에서 추천곡을 가져오는 함수 """
+    """ Youtube에서 추천곡을 가져오는 함수 """
     youtube_client = YoutubeClient()
     search_video_df, search_playlist_df = youtube_client.search_youtube(song_title + " music")
     logger.info(f"youtube 추천곡 _ 데이터를 성공적으로 가져왔습니다: {search_video_df}, {search_playlist_df}")

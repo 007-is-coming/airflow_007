@@ -1,0 +1,59 @@
+[2024-11-27T00:39:18.242+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-27T00:39:18.254+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag_search_songs.etl_task_tracks manual__2024-11-27T00:39:16.994275+00:00 [queued]>
+[2024-11-27T00:39:18.262+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag_search_songs.etl_task_tracks manual__2024-11-27T00:39:16.994275+00:00 [queued]>
+[2024-11-27T00:39:18.263+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-11-27T00:39:18.270+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): etl_task_tracks> on 2024-11-27 00:39:16.994275+00:00
+[2024-11-27T00:39:18.275+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=311) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-27T00:39:18.276+0000] {standard_task_runner.py:72} INFO - Started process 314 to run task
+[2024-11-27T00:39:18.276+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag_search_songs', 'etl_task_tracks', 'manual__2024-11-27T00:39:16.994275+00:00', '--job-id', '402', '--raw', '--subdir', 'DAGS_FOLDER/songs_dag.py', '--cfg-path', '/tmp/tmp126fav31']
+[2024-11-27T00:39:18.278+0000] {standard_task_runner.py:105} INFO - Job 402: Subtask etl_task_tracks
+[2024-11-27T00:39:18.506+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag_search_songs.etl_task_tracks manual__2024-11-27T00:39:16.994275+00:00 [running]> on host 5c426c48ab2b
+[2024-11-27T00:39:18.536+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag_search_songs' AIRFLOW_CTX_TASK_ID='etl_task_tracks' AIRFLOW_CTX_EXECUTION_DATE='2024-11-27T00:39:16.994275+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-27T00:39:16.994275+00:00'
+[2024-11-27T00:39:18.537+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-27T00:39:19.630+0000] {songs_dag.py:26} INFO - youtube 추천곡 _ 데이터를 성공적으로 가져왔습니다:    no                                        video_title     video_id
+0   1   Ed Sheeran - Shape of You (Official Music Video)  JGwWNGJdvx8
+1   2                 Ed Sheeran - Shape Of You (Lyrics)  Vds8ddYXYZY
+2   3   Ed Sheeran - Shape Of You [Official Lyric Video]  _dK2tDK9grQ
+3   4       Ed Sheeran - Shape Of You ( cover by J.Fla )  MhQKe-aERsU
+4   5                 Ed Sheeran - Shape Of You (Lyrics)  VwomfkFDvH4
+5   6  [AB STAGE] Ed Sheeran - Shape of you | @H2_day...  V438CXxIr1M
+6   7        Ed Sheeran - Shape Of You (Karaoke Version)  o71_MatpYV0
+7   8    Ed Sheeran - Shape of You (The Biggest Weekend)  Svtr-p4mrQ8
+8   9  Shape Of You X Naina - Mashup | Ed Sheeran &am...  l3QDy7zMZP4
+9  10  Ed Sheeran - Shape Of You - (Sheeran Looper X ...  IiSgX-T_oPw,    no  ...                                playlist_thumbnail
+0   1  ...  https://i.ytimg.com/vi/JGwWNGJdvx8/mqdefault.jpg
+1   2  ...  https://i.ytimg.com/vi/12gmxhEFeBo/mqdefault.jpg
+2   3  ...  https://i.ytimg.com/vi/JGwWNGJdvx8/mqdefault.jpg
+3   4  ...  https://i.ytimg.com/vi/JGwWNGJdvx8/mqdefault.jpg
+4   5  ...  https://i.ytimg.com/vi/u6wOyMUs74I/mqdefault.jpg
+5   6  ...  https://i.ytimg.com/vi/th92jw2CFOA/mqdefault.jpg
+6   7  ...  https://i.ytimg.com/vi/JGwWNGJdvx8/mqdefault.jpg
+7   8  ...  https://i.ytimg.com/vi/JGwWNGJdvx8/mqdefault.jpg
+8   9  ...  https://i.ytimg.com/vi/OzTx9ttt4DA/mqdefault.jpg
+9  10  ...  https://i.ytimg.com/vi/JGwWNGJdvx8/mqdefault.jpg
+
+[10 rows x 4 columns]
+[2024-11-27T00:39:19.981+0000] {logging_mixin.py:190} INFO - Found track: Shape of You by Ed Sheeran
+[2024-11-27T00:39:20.333+0000] {songs_dag.py:31} INFO - spotify 추천곡 _ 데이터를 성공적으로 가져왔습니다: [{'title': 'Best Day Of My Life', 'link': 'https://open.spotify.com/track/5Hroj5K7vLpIG4FNCRIjbP', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b273cc761ba55b0e7abad4539abe'}, {'title': 'Starving', 'link': 'https://open.spotify.com/track/4Ce37cRWvM1vIGGynKcs22', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b2730506a838892be6229dca857b'}, {'title': 'Made You Look', 'link': 'https://open.spotify.com/track/0QHEIqNKsMoOY5urbzN48u', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b2731a4f1ada93881da4ca8060ff'}, {'title': 'thank u, next', 'link': 'https://open.spotify.com/track/3e9HZxeyfWwjeyPAMmWSSQ', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b27356ac7b86e090f307e218e9c8'}, {'title': 'Bad Liar', 'link': 'https://open.spotify.com/track/2RSHsoi04658QL5xgQVov3', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b273da6f73a25f4c79d0e6b4a8bd'}, {'title': 'Familiar (With J. Balvin)', 'link': 'https://open.spotify.com/track/3o5GtsTSrYQ9AwLvWo2F3X', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b273373a46efca570f83dd78313f'}, {'title': 'Without You (feat. Sandro Cavazza)', 'link': 'https://open.spotify.com/track/6Pgkp4qUoTmJIPn7ReaGxL', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b273a26cc58b4d64c2ece3376389'}, {'title': 'Budapest', 'link': 'https://open.spotify.com/track/2ixsaeFioXJmMgkkbd4uj1', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b273d6df3bccf3ec41ea2f76debc'}, {'title': '7 Years', 'link': 'https://open.spotify.com/track/7129iqBafaphfc3WPCGC0L', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b2739c2ba50154a64c3c898ec7e2'}, {'title': 'Dandelions', 'link': 'https://open.spotify.com/track/2eAvDnpXP5W0cVtiI0PUxV', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b27397e971f3e53475091dc8d707'}]
+[2024-11-27T00:39:20.354+0000] {base.py:84} INFO - Retrieving connection 'playlist'
+[2024-11-27T00:39:20.531+0000] {songs_dag.py:129} INFO - youtube 검색 _ search_youtube_video 기존 테이블 삭제 중...
+[2024-11-27T00:39:20.568+0000] {songs_dag.py:134} INFO - spotify 추천곡 _ 기존 테이블 삭제 중...
+[2024-11-27T00:39:20.585+0000] {songs_dag.py:137} INFO - youtube 검색 _ search_youtube_video 새 테이블 생성 중...
+[2024-11-27T00:39:20.608+0000] {songs_dag.py:147} INFO - youtube 검색 _ search_youtube_video 새 테이블 생성 완료
+[2024-11-27T00:39:20.610+0000] {songs_dag.py:151} INFO - spotify 추천곡 _ 새 테이블 생성 중...
+[2024-11-27T00:39:20.637+0000] {songs_dag.py:161} INFO - spotify 추천곡 _ 새 테이블 생성 완료
+[2024-11-27T00:39:20.677+0000] {songs_dag.py:47} INFO - youtube 검색 _ 테이블 playlist_schema.search_youtube_video에 데이터 삽입 완료
+[2024-11-27T00:39:20.678+0000] {songs_dag.py:165} INFO - youtube 검색 _ search_youtube 데이터가 성공적으로 데이터베이스에 삽입되었습니다.
+[2024-11-27T00:39:20.831+0000] {songs_dag.py:174} INFO - spotify 추천곡 _ 데이터가 성공적으로 데이터베이스에 삽입되었습니다.
+[2024-11-27T00:39:20.832+0000] {songs_dag.py:58} INFO -  search songs : 데이터를 삭제합니다.
+[2024-11-27T00:39:20.871+0000] {songs_dag.py:73} INFO -  search_songs _ 새 테이블 생성 완료
+[2024-11-27T00:39:20.900+0000] {songs_dag.py:99} INFO -  search songs : 데이터가 삽입 되었습니다.
+[2024-11-27T00:39:20.932+0000] {songs_dag.py:190} INFO - 추천곡 _ 데이터베이스 연결이 종료되었습니다.
+[2024-11-27T00:39:20.933+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-27T00:39:20.940+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-27T00:39:20.940+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag_search_songs, task_id=etl_task_tracks, run_id=manual__2024-11-27T00:39:16.994275+00:00, execution_date=20241127T003916, start_date=20241127T003918, end_date=20241127T003920
+[2024-11-27T00:39:20.975+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-27T00:39:21.104+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-27T00:39:21.105+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

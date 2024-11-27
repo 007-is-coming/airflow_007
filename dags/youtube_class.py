@@ -19,12 +19,18 @@ class YoutubeClient:
         특정 노래 제목으로 동영상과 플레이리스트를 
         10개씩 검색하여 DataFrame으로 반환하는 함수.
         """
+        #music keyword로 음악 구분
+        music_keywords = [
+            "music", "song", "official video", "lyrics", "album", "soundtrack", "M/V", "MV",  "M/V",# 영어
+            "음악", "노래", "공식 영상", "가사", "앨범", "사운드트랙", "뮤비"  # 한글
+        ]
+
         params = {
             'key': self.API_KEY,
             'q': song_title,
             'type': 'video',
             'part': 'snippet',
-            'maxResults': max_results
+            'maxResults': 200 #max_results를 1로 지정 후 -> related video로 가지고 오기 -> 제목과 일치하는 것 제외
         }
         response = requests.get(self.SEARCH_URL, params=params)
 
@@ -32,12 +38,16 @@ class YoutubeClient:
             print(f"Error: {response.status_code}, {response.text}")
             return pd.DataFrame()  # 빈 DataFrame 반환
 
+        #최대 10개까지 출력, song_title을 포함하는 title은 list 미추가
         data = response.json()
         videos = []
         for idx, item in enumerate(data.get('items', []), 1):
             title = item['snippet']['title']
             video_id = item['id']['videoId']
-            videos.append({'no':idx, 'video_title': title, 'video_id': video_id})
+            if any(keyword in title.lower() for keyword in music_keywords) and song_title.lower() not in title.lower(): 
+                videos.append({'no':idx, 'video_title': title, 'video_id': video_id})
+            if len(videos) == max_results:
+                break
 
         params = {
             'key': self.API_KEY,

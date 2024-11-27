@@ -1,0 +1,59 @@
+[2024-11-23T05:19:09.384+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: spotify_etl_dag_recommend.spotify_etl_task_recommend scheduled__2024-11-22T00:00:00+00:00 [queued]>
+[2024-11-23T05:19:09.399+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: spotify_etl_dag_recommend.spotify_etl_task_recommend scheduled__2024-11-22T00:00:00+00:00 [queued]>
+[2024-11-23T05:19:09.400+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2024-11-23T05:19:09.400+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 2
+[2024-11-23T05:19:09.400+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2024-11-23T05:19:09.417+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): spotify_etl_task_recommend> on 2024-11-22 00:00:00+00:00
+[2024-11-23T05:19:09.424+0000] {standard_task_runner.py:55} INFO - Started process 5046 to run task
+[2024-11-23T05:19:09.428+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'spotify_etl_dag_recommend', 'spotify_etl_task_recommend', 'scheduled__2024-11-22T00:00:00+00:00', '--job-id', '57', '--raw', '--subdir', 'DAGS_FOLDER/spotify_recommend_dag.py', '--cfg-path', '/tmp/tmpm8xe4tua']
+[2024-11-23T05:19:09.429+0000] {standard_task_runner.py:83} INFO - Job 57: Subtask spotify_etl_task_recommend
+[2024-11-23T05:19:09.505+0000] {task_command.py:388} INFO - Running <TaskInstance: spotify_etl_dag_recommend.spotify_etl_task_recommend scheduled__2024-11-22T00:00:00+00:00 [running]> on host 810d954bd5ae
+[2024-11-23T05:19:09.566+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=spotify_etl_dag_recommend
+AIRFLOW_CTX_TASK_ID=spotify_etl_task_recommend
+AIRFLOW_CTX_EXECUTION_DATE=2024-11-22T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-11-22T00:00:00+00:00
+[2024-11-23T05:19:09.585+0000] {oauth2.py:471} INFO - User authentication requires interaction with your web browser. Once you enter your credentials and give authorization, you will be redirected to a url.  Paste that url you were directed to to complete the authorization.
+[2024-11-23T05:19:09.586+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/spotify_recommend_dag.py", line 77, in run_etl
+    recommendations_data = extract_data_from_spotify(song_title)
+  File "/opt/airflow/dags/spotify_recommend_dag.py", line 15, in extract_data_from_spotify
+    recommendations_data = spotify_client.get_recommendations(song_title)
+  File "/opt/airflow/dags/spotify_class.py", line 31, in get_recommendations
+    results = self.sp.search(q=song_title, type='track', limit=1)
+  File "/home/airflow/.local/lib/python3.7/site-packages/spotipy/client.py", line 588, in search
+    "search", q=q, limit=limit, offset=offset, type=type, market=market
+  File "/home/airflow/.local/lib/python3.7/site-packages/spotipy/client.py", line 323, in _get
+    return self._internal_call("GET", url, payload, kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/spotipy/client.py", line 247, in _internal_call
+    headers = self._auth_headers()
+  File "/home/airflow/.local/lib/python3.7/site-packages/spotipy/client.py", line 238, in _auth_headers
+    token = self.auth_manager.get_access_token(as_dict=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/spotipy/oauth2.py", line 535, in get_access_token
+    "code": code or self.get_auth_response(),
+  File "/home/airflow/.local/lib/python3.7/site-packages/spotipy/oauth2.py", line 490, in get_auth_response
+    return self._get_auth_response_local_server(redirect_port)
+  File "/home/airflow/.local/lib/python3.7/site-packages/spotipy/oauth2.py", line 457, in _get_auth_response_local_server
+    server = start_local_http_server(redirect_port)
+  File "/home/airflow/.local/lib/python3.7/site-packages/spotipy/oauth2.py", line 1303, in start_local_http_server
+    server = HTTPServer(("127.0.0.1", port), handler)
+  File "/usr/local/lib/python3.7/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/local/lib/python3.7/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/local/lib/python3.7/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+[2024-11-23T05:19:09.599+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=spotify_etl_dag_recommend, task_id=spotify_etl_task_recommend, execution_date=20241122T000000, start_date=20241123T051909, end_date=20241123T051909
+[2024-11-23T05:19:09.613+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 57 for task spotify_etl_task_recommend ([Errno 98] Address already in use; 5046)
+[2024-11-23T05:19:09.651+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2024-11-23T05:19:09.681+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

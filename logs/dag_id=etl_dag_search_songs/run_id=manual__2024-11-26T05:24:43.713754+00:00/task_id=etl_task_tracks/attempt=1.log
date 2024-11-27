@@ -1,0 +1,59 @@
+[2024-11-26T05:24:45.187+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-26T05:24:45.196+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag_search_songs.etl_task_tracks manual__2024-11-26T05:24:43.713754+00:00 [queued]>
+[2024-11-26T05:24:45.201+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag_search_songs.etl_task_tracks manual__2024-11-26T05:24:43.713754+00:00 [queued]>
+[2024-11-26T05:24:45.203+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-11-26T05:24:45.210+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): etl_task_tracks> on 2024-11-26 05:24:43.713754+00:00
+[2024-11-26T05:24:45.214+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1153) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-26T05:24:45.215+0000] {standard_task_runner.py:72} INFO - Started process 1157 to run task
+[2024-11-26T05:24:45.215+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag_search_songs', 'etl_task_tracks', 'manual__2024-11-26T05:24:43.713754+00:00', '--job-id', '386', '--raw', '--subdir', 'DAGS_FOLDER/songs_dag.py', '--cfg-path', '/tmp/tmpvkq48_4p']
+[2024-11-26T05:24:45.217+0000] {standard_task_runner.py:105} INFO - Job 386: Subtask etl_task_tracks
+[2024-11-26T05:24:45.241+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag_search_songs.etl_task_tracks manual__2024-11-26T05:24:43.713754+00:00 [running]> on host 5c426c48ab2b
+[2024-11-26T05:24:45.432+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag_search_songs' AIRFLOW_CTX_TASK_ID='etl_task_tracks' AIRFLOW_CTX_EXECUTION_DATE='2024-11-26T05:24:43.713754+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-26T05:24:43.713754+00:00'
+[2024-11-26T05:24:45.433+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-26T05:24:46.727+0000] {songs_dag.py:26} INFO - youtube 추천곡 _ 데이터를 성공적으로 가져왔습니다:    no                                        video_title     video_id
+0   1  [Playlist] 슬슬 연말 분위기를 내볼까요? | 퍼펙트 크리스마스 캐롤 플레이...  a_80o2lDYec
+1   2  Unwinding with Christmas Jazz Music 2025 🎄 Rel...  _uxpYOHxRK0
+2   3  [𝐏𝐥𝐚𝐲𝐥𝐈𝐬𝐭] 🎅 솔직히 나만 지금부터 캐롤 듣는 거 아니지? 🎄 | 크리스마...  cGNnccgCSOs
+3   4  크리스마스 Playlist | 신나는 인싸노래만 모아온 BEST 인기곡 캐롤 Mer...  y2hV2PXka_M
+4   5           𝗣𝗹𝗮𝘆𝗹𝗶𝘀𝘁. 지나가던 산타도 듣고 간다는 크리스마스 캐롤 모음 🎅🎄  qvIP0CW_1yQ
+5   6  𝐏𝐥𝐚𝐲𝐥𝐢𝐬𝐭🎄 크리스마스가 다가온다. 그것도 아주 행복할❤  캐롤 플레이리스트🎁...  TX-yJ3yyMyg
+6   7  Relaxing Christmas Jazz Music Ambience 🎄 Instr...  y9B6Vqch0uM
+7   8  Top Christmas Songs of All Time 🎅🏼 Best Christ...  fSVbO7sM8D8
+8   9  The Ananda Joy Singers &#39;The CHRISTMAS MYST...  ySstFmIeh3o
+9  10  Warm Christmas Ambience with Jazz Relaxing Mus...  8NL4a1qPY74,    no  ...                                playlist_thumbnail
+0   1  ...  https://i.ytimg.com/vi/Mur4L2B2lwE/mqdefault.jpg
+1   2  ...  https://i.ytimg.com/vi/a_80o2lDYec/mqdefault.jpg
+2   3  ...  https://i.ytimg.com/vi/yXQViqx6GMY/mqdefault.jpg
+3   4  ...  https://i.ytimg.com/vi/sEITCgcWSlU/mqdefault.jpg
+4   5  ...  https://i.ytimg.com/vi/yXQViqx6GMY/mqdefault.jpg
+5   6  ...  https://i.ytimg.com/vi/O1x-hOOrl5E/mqdefault.jpg
+6   7  ...  https://i.ytimg.com/vi/E8gmARGvPlI/mqdefault.jpg
+7   8  ...  https://i.ytimg.com/vi/yXQViqx6GMY/mqdefault.jpg
+8   9  ...  https://i.ytimg.com/vi/vL8IvJJbxjU/mqdefault.jpg
+9  10  ...  https://i.ytimg.com/vi/aAkMkVFwAoo/mqdefault.jpg
+
+[10 rows x 4 columns]
+[2024-11-26T05:24:46.885+0000] {logging_mixin.py:190} INFO - Found track: Because It's Christmas by Sung Si Kyung
+[2024-11-26T05:24:47.253+0000] {songs_dag.py:31} INFO - spotify 추천곡 _ 데이터를 성공적으로 가져왔습니다: [{'title': 'December', 'link': 'https://open.spotify.com/track/5DNUX7ggiWGtrDhDZTGasC', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b273afeb0a53d6a4490ca0b72466'}, {'title': 'Snow In California', 'link': 'https://open.spotify.com/track/6Uc4EHr3ktYmLfLDY7LifJ', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b2730c053ee476f7ce576369241e'}, {'title': "It's the Most Wonderful Time of the Year", 'link': 'https://open.spotify.com/track/1IcR6RlgvDczfvoWJSSY2A', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b273585897779cf3591ba0f07650'}, {'title': '24 to 25', 'link': 'https://open.spotify.com/track/0bCT2J3Cyg7DfN0b9uu39p', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b2738b485d188c415a524916881c'}, {'title': "When It's Christmas", 'link': 'https://open.spotify.com/track/2bimU81DVIiZDvgjWtD27m', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b2730ebcffa9629a4375f74fa9c7'}, {'title': 'Merry Christmas ahead (feat.Chundung)', 'link': 'https://open.spotify.com/track/6I9Y6PHTWv72fgQV3tIHt0', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b27315cf3110f19687b1a24943d1'}, {'title': 'Santa Claus Is Coming To Town (Army Violin Duet)', 'link': 'https://open.spotify.com/track/03JS5UNpMaf71jwUIU6pWT', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b27316887db15e59bc98c6a96fb5'}, {'title': 'Snowman - Special Ver.', 'link': 'https://open.spotify.com/track/0gf6VDe1fpXMvbrloqFcRF', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b273eafccaa5a0fbf5caf9d1e424'}, {'title': 'First winter', 'link': 'https://open.spotify.com/track/1O4MAV5X8y3HvFTG1QUCTZ', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b273e100bfba55db38a4b56b45f5'}, {'title': 'What I Want For Christmas', 'link': 'https://open.spotify.com/track/6LYw9XyG9AQSQF178FKjIO', 'cover_image': 'https://i.scdn.co/image/ab67616d0000b273009a03636f29d6b4251091ef'}]
+[2024-11-26T05:24:47.272+0000] {base.py:84} INFO - Retrieving connection 'playlist'
+[2024-11-26T05:24:47.670+0000] {songs_dag.py:129} INFO - youtube 검색 _ search_youtube_video 기존 테이블 삭제 중...
+[2024-11-26T05:24:47.742+0000] {songs_dag.py:134} INFO - spotify 추천곡 _ 기존 테이블 삭제 중...
+[2024-11-26T05:24:47.758+0000] {songs_dag.py:137} INFO - youtube 검색 _ search_youtube_video 새 테이블 생성 중...
+[2024-11-26T05:24:47.782+0000] {songs_dag.py:147} INFO - youtube 검색 _ search_youtube_video 새 테이블 생성 완료
+[2024-11-26T05:24:47.782+0000] {songs_dag.py:151} INFO - spotify 추천곡 _ 새 테이블 생성 중...
+[2024-11-26T05:24:47.804+0000] {songs_dag.py:161} INFO - spotify 추천곡 _ 새 테이블 생성 완료
+[2024-11-26T05:24:47.838+0000] {songs_dag.py:47} INFO - youtube 검색 _ 테이블 playlist_schema.search_youtube_video에 데이터 삽입 완료
+[2024-11-26T05:24:47.838+0000] {songs_dag.py:165} INFO - youtube 검색 _ search_youtube 데이터가 성공적으로 데이터베이스에 삽입되었습니다.
+[2024-11-26T05:24:47.987+0000] {songs_dag.py:174} INFO - spotify 추천곡 _ 데이터가 성공적으로 데이터베이스에 삽입되었습니다.
+[2024-11-26T05:24:47.987+0000] {songs_dag.py:58} INFO -  search songs : 데이터를 삭제합니다.
+[2024-11-26T05:24:48.025+0000] {songs_dag.py:73} INFO -  search_songs _ 새 테이블 생성 완료
+[2024-11-26T05:24:48.056+0000] {songs_dag.py:99} INFO -  search songs : 데이터가 삽입 되었습니다.
+[2024-11-26T05:24:48.082+0000] {songs_dag.py:190} INFO - 추천곡 _ 데이터베이스 연결이 종료되었습니다.
+[2024-11-26T05:24:48.083+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-26T05:24:48.091+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-26T05:24:48.091+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag_search_songs, task_id=etl_task_tracks, run_id=manual__2024-11-26T05:24:43.713754+00:00, execution_date=20241126T052443, start_date=20241126T052445, end_date=20241126T052448
+[2024-11-26T05:24:48.139+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-26T05:24:48.162+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-26T05:24:48.163+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,50 @@
+[2024-11-26T01:48:41.961+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-26T01:48:41.971+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: youtube_etl_dag_daily_playlists.youtube_etl_task_daily_playlists scheduled__2024-11-25T00:00:00+00:00 [queued]>
+[2024-11-26T01:48:41.975+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: youtube_etl_dag_daily_playlists.youtube_etl_task_daily_playlists scheduled__2024-11-25T00:00:00+00:00 [queued]>
+[2024-11-26T01:48:41.975+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-11-26T01:48:42.105+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): youtube_etl_task_daily_playlists> on 2024-11-25 00:00:00+00:00
+[2024-11-26T01:48:42.109+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=61) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-26T01:48:42.110+0000] {standard_task_runner.py:72} INFO - Started process 67 to run task
+[2024-11-26T01:48:42.110+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'youtube_etl_dag_daily_playlists', 'youtube_etl_task_daily_playlists', 'scheduled__2024-11-25T00:00:00+00:00', '--job-id', '26', '--raw', '--subdir', 'DAGS_FOLDER/no_use/youtube_daily_playlist_dag.py', '--cfg-path', '/tmp/tmpa18vvsr6']
+[2024-11-26T01:48:42.112+0000] {standard_task_runner.py:105} INFO - Job 26: Subtask youtube_etl_task_daily_playlists
+[2024-11-26T01:48:42.133+0000] {task_command.py:467} INFO - Running <TaskInstance: youtube_etl_dag_daily_playlists.youtube_etl_task_daily_playlists scheduled__2024-11-25T00:00:00+00:00 [running]> on host e4b7d7f6e901
+[2024-11-26T01:48:42.174+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='youtube_etl_dag_daily_playlists' AIRFLOW_CTX_TASK_ID='youtube_etl_task_daily_playlists' AIRFLOW_CTX_EXECUTION_DATE='2024-11-25T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-11-25T00:00:00+00:00'
+[2024-11-26T01:48:42.174+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-26T01:48:42.946+0000] {youtube_daily_playlist_dag.py:28} INFO - youtube daily _ youtube 데일리 데이터를 성공적으로 가져왔습니다:    no                                        video_title     video_id
+0   1  Kendrick Lamar - wacced out murals (Official A...  YwUQ_5iV9pY
+1   2           Kendrick Lamar - luther (Official Audio)  HfWLgELllZs
+2   3                                        squabble up  U0KTVVMvcc4
+3   4  GloRilla - I LUV HER (feat. T-Pain) (Official ...  q44VdjcsjPg
+4   5                            Lil Baby - Insecurities  POCrFEZO82s
+5   6  ROSÉ & Bruno Mars - APT. (live from MAMA award...  Jn8KvdWagfo
+6   7     ROSÉ - number one girl (official music video)  pZ1NdE69VTs
+7   8  YTB Fatt - "FREE SMURK, BIG EDDIE & CAM" (Offi...  8ls44k4ub6U
+8   9             Gunna - HIM ALL ALONG [Official Video]  w7Wf0h1Q8a4
+9  10                    Lil Baby - 5AM (Official Video)  KhhN6m7Lfyw,    no  ...                                playlist_thumbnail
+0   1  ...  https://i.ytimg.com/vi/p7zFxzBj5F4/mqdefault.jpg
+1   2  ...  https://i.ytimg.com/vi/-DgEwQbQ55Q/mqdefault.jpg
+2   3  ...  https://i.ytimg.com/vi/9nqZ2F-ZAqY/mqdefault.jpg
+3   4  ...  https://i.ytimg.com/vi/6giH_4L0eDo/mqdefault.jpg
+4   5  ...  https://i.ytimg.com/vi/FzG4uDgje3M/mqdefault.jpg
+5   6  ...  https://i.ytimg.com/vi/wbsSY3YVHaU/mqdefault.jpg
+6   7  ...  https://i.ytimg.com/vi/mFnyrFwLyIQ/mqdefault.jpg
+7   8  ...  https://i.ytimg.com/vi/EI1VNeZYVTI/mqdefault.jpg
+8   9  ...  https://i.ytimg.com/vi/sES75AK8YS4/mqdefault.jpg
+9  10  ...  https://i.ytimg.com/vi/VDnwRGw-THI/mqdefault.jpg
+
+[10 rows x 4 columns]
+[2024-11-26T01:48:42.954+0000] {base.py:84} INFO - Retrieving connection 'playlist'
+[2024-11-26T01:48:43.101+0000] {youtube_daily_playlist_dag.py:72} INFO - youtube daily _ daily_youtube 기존 테이블 삭제 중...
+[2024-11-26T01:48:43.132+0000] {youtube_daily_playlist_dag.py:76} INFO - youtube daily _ daily_youtube 새 테이블 생성 중...
+[2024-11-26T01:48:43.159+0000] {youtube_daily_playlist_dag.py:84} INFO - youtube daily _ 새 테이블 생성 완료
+[2024-11-26T01:48:43.202+0000] {youtube_daily_playlist_dag.py:43} INFO - youtube daily _ 테이블 playlist_schema.daily_youtube_video에 데이터 삽입 완료
+[2024-11-26T01:48:43.216+0000] {youtube_daily_playlist_dag.py:90} INFO - youtube daily _ 데이터가 성공적으로 데이터베이스에 삽입되었습니다.
+[2024-11-26T01:48:43.218+0000] {youtube_daily_playlist_dag.py:100} INFO - youtube daily _ 데이터베이스 연결이 종료되었습니다.
+[2024-11-26T01:48:43.223+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-26T01:48:43.239+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-26T01:48:43.242+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=youtube_etl_dag_daily_playlists, task_id=youtube_etl_task_daily_playlists, run_id=scheduled__2024-11-25T00:00:00+00:00, execution_date=20241125T000000, start_date=20241126T014841, end_date=20241126T014843
+[2024-11-26T01:48:43.295+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-26T01:48:43.309+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-26T01:48:43.311+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

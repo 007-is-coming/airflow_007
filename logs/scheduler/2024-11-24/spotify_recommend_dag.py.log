@@ -1,0 +1,56 @@
+[2024-11-24T13:36:23.365+0000] {processor.py:153} INFO - Started process (PID=57) to work on /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:36:23.370+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/spotify_recommend_dag.py for tasks to queue
+[2024-11-24T13:36:23.386+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:36:23.386+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:36:23.512+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spotify_etl_dag_recommend']) retrieved from /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:36:23.612+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:36:23.611+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-11-24T13:36:23.633+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:36:23.633+0000] {dag.py:3441} INFO - Setting next_dagrun for spotify_etl_dag_recommend to 2023-11-22T00:00:00+00:00, run_after=2023-11-23T00:00:00+00:00
+[2024-11-24T13:36:23.766+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/spotify_recommend_dag.py took 0.407 seconds
+[2024-11-24T13:36:54.129+0000] {processor.py:153} INFO - Started process (PID=75) to work on /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:36:54.129+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/spotify_recommend_dag.py for tasks to queue
+[2024-11-24T13:36:54.130+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:36:54.130+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:36:54.169+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spotify_etl_dag_recommend']) retrieved from /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:36:54.186+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:36:54.186+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-11-24T13:36:54.197+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:36:54.197+0000] {dag.py:3441} INFO - Setting next_dagrun for spotify_etl_dag_recommend to 2023-11-22T00:00:00+00:00, run_after=2023-11-23T00:00:00+00:00
+[2024-11-24T13:36:54.221+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/spotify_recommend_dag.py took 0.095 seconds
+[2024-11-24T13:37:24.542+0000] {processor.py:153} INFO - Started process (PID=86) to work on /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:37:24.543+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/spotify_recommend_dag.py for tasks to queue
+[2024-11-24T13:37:24.544+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:37:24.544+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:37:24.572+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spotify_etl_dag_recommend']) retrieved from /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:37:24.583+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:37:24.583+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-11-24T13:37:24.594+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:37:24.594+0000] {dag.py:3441} INFO - Setting next_dagrun for spotify_etl_dag_recommend to 2023-11-22T00:00:00+00:00, run_after=2023-11-23T00:00:00+00:00
+[2024-11-24T13:37:24.601+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/spotify_recommend_dag.py took 0.064 seconds
+[2024-11-24T13:37:54.932+0000] {processor.py:153} INFO - Started process (PID=103) to work on /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:37:54.933+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/spotify_recommend_dag.py for tasks to queue
+[2024-11-24T13:37:54.934+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:37:54.934+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:37:54.969+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spotify_etl_dag_recommend']) retrieved from /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:37:54.984+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:37:54.983+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-11-24T13:37:54.997+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:37:54.997+0000] {dag.py:3441} INFO - Setting next_dagrun for spotify_etl_dag_recommend to 2023-11-22T00:00:00+00:00, run_after=2023-11-23T00:00:00+00:00
+[2024-11-24T13:37:55.009+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/spotify_recommend_dag.py took 0.081 seconds
+[2024-11-24T13:38:25.348+0000] {processor.py:153} INFO - Started process (PID=117) to work on /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:38:25.348+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/spotify_recommend_dag.py for tasks to queue
+[2024-11-24T13:38:25.349+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:38:25.349+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:38:25.376+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spotify_etl_dag_recommend']) retrieved from /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:38:25.390+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:38:25.390+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-11-24T13:38:25.405+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:38:25.405+0000] {dag.py:3441} INFO - Setting next_dagrun for spotify_etl_dag_recommend to 2023-11-22T00:00:00+00:00, run_after=2023-11-23T00:00:00+00:00
+[2024-11-24T13:38:25.417+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/spotify_recommend_dag.py took 0.071 seconds
+[2024-11-24T13:38:55.703+0000] {processor.py:153} INFO - Started process (PID=128) to work on /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:38:55.703+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/spotify_recommend_dag.py for tasks to queue
+[2024-11-24T13:38:55.704+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:38:55.704+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:38:55.730+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spotify_etl_dag_recommend']) retrieved from /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:38:55.740+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:38:55.740+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-11-24T13:38:55.751+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:38:55.751+0000] {dag.py:3441} INFO - Setting next_dagrun for spotify_etl_dag_recommend to 2023-11-22T00:00:00+00:00, run_after=2023-11-23T00:00:00+00:00
+[2024-11-24T13:38:55.762+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/spotify_recommend_dag.py took 0.060 seconds
+[2024-11-24T13:39:26.051+0000] {processor.py:153} INFO - Started process (PID=139) to work on /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:39:26.052+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/spotify_recommend_dag.py for tasks to queue
+[2024-11-24T13:39:26.053+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:39:26.053+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:39:26.080+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spotify_etl_dag_recommend']) retrieved from /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:39:26.097+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:39:26.097+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-11-24T13:39:26.110+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:39:26.110+0000] {dag.py:3441} INFO - Setting next_dagrun for spotify_etl_dag_recommend to 2023-11-22T00:00:00+00:00, run_after=2023-11-23T00:00:00+00:00
+[2024-11-24T13:39:26.122+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/spotify_recommend_dag.py took 0.073 seconds
+[2024-11-24T13:39:56.448+0000] {processor.py:153} INFO - Started process (PID=167) to work on /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:39:56.451+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/spotify_recommend_dag.py for tasks to queue
+[2024-11-24T13:39:56.453+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:39:56.452+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:39:56.484+0000] {processor.py:753} INFO - DAG(s) dict_keys(['spotify_etl_dag_recommend']) retrieved from /opt/airflow/dags/spotify_recommend_dag.py
+[2024-11-24T13:39:56.494+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:39:56.494+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2024-11-24T13:39:56.504+0000] {logging_mixin.py:137} INFO - [2024-11-24T13:39:56.504+0000] {dag.py:3441} INFO - Setting next_dagrun for spotify_etl_dag_recommend to 2023-11-22T00:00:00+00:00, run_after=2023-11-23T00:00:00+00:00
+[2024-11-24T13:39:56.514+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/spotify_recommend_dag.py took 0.069 seconds
