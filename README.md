@@ -41,15 +41,6 @@
 
 ## III. 결과물
 
-### **📊 Web Page Demonstration Video**
-
-<aside>
-
-- **`Demonstration video`**
-    
-    [화면 기록 2024-11-27 13.01.27.mov](https://prod-files-secure.s3.us-west-2.amazonaws.com/29dd0948-7b38-443b-af5a-c6bc908226ab/2b6e86d3-adff-4c0a-ab1c-9dbaf98174d5/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB_%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8_2024-11-27_13.01.27.mov)
-    
-</aside>
 
 ### **📊 Web Page Screenshot**
 
